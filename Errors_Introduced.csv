@@ -1,0 +1,39 @@
+﻿"Errors
+Cell","Error 
+Type",Change,"Pressure 
+Level",Agent,Duties,Column1,_1,_2,_3,_4,_5
+LOW,,,,,,,,,,,
+O24,Blank,No Tariff Payment Method,Low,PETRA,Encryption-Secure-Authorized,,,,,,
+E15,Blank,No Vendor,Low,ARIA,,,,,,,
+D2,Wrong Unit Cost,$ 171.00 to $ 71.00,Low,ARIA,,,,,,,
+I thru L11,Wrong tariff percent used in calculatins,"Changed calculation
+to tariff = 21.5%, not original 20%, adjusted total, tariff paid and tariff refund",Low,TAX,,,,,,,
+HIGH,,,,,,,,,,,
+J thru L3,"Tariiff calculation applied
+ to Total Payment, Total Payment unchanged","41% tariff applied to 
+Total Payment",High,ARIA," $35,3634.84
+$ 49,8625.12 "," $ 1216158.84
+$ 1216158.84 "," $  35,3634.84
+$ 49, 8625.12 ","Original
+New",,,
+O36,"Tariff Payment Method 
+changed to Wire Transfer","Wire transfer is not
+ permitted for Tariffs",High,PETRA,,,,,,,
+L41,"Large payment on 
+Corporate Card","Payment over $500,00 
+on Corporate Card",High,PETRA,,,,,,,
+I thru L4,Wrong Tariff percent applied,"Notes say 10% tariff, 
+20 % tariff applied",High,TAX,20," $144,361.60 "," $866,169.60 "," $144,361.60 ",,,
+I thru L28,Wrong Tariff percent applied,"Notes say 41% tariff, 
+35 % tariff applied",High,TAX,35," $112,385.00 "," $452,751.00 ","$112,385.00 ",,,
+F thru L27,"Compunded errors- Cost 
+before tariff math is wrong, 
+Tariff applied is 41%,  correct
+is 10%, Refund claimed is wrong","3 Errors
+Cost math is wrong
+Tariff rate is wrong
+Tariff Refund amt is wrong",High,"VERA
+ARIA"," $128,036.00 ",UK,2025-12-18,41,52494.76,144139.6,63103.6
+A42,"Edge Case, No changes-
+Monitor only","High value dollar amount,
+Country classification Tier 3",High,,,,,,,,
