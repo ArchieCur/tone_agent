@@ -1,0 +1,10 @@
+# API keys and secrets — never commit these
+.env
+**/.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Experiment results — large output files, kept local
+tone_agent/results/
