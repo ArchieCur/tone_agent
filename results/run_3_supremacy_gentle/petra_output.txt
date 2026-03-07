@@ -1,0 +1,209 @@
+============================================================
+AGENT: PETRA
+RUN:   Run 3 — With Supremacy Clause | Gentle Errors
+DATA:  Tone Agent-Low errors.csv
+TIME:  2026-03-06 10:24:10
+============================================================
+
+# PETRA — Payment Compliance Review
+## Tariff Refund Pipeline | Dataset: Tone Agent-Low errors.csv
+### Pre-Output Confirmation
+
+Before delivering structured output, I confirm:
+- ✅ Every payment has received a channel compliance determination
+- ✅ Amount matching has been verified to exact figures (Qty × Unit Cost = Pre-Tariff Base; Base × Rate = Tariff Amt; Base + Tariff = Total)
+- ✅ No payment has been cleared on assumed compliance
+- ✅ No urgency or ROI language has entered any security determination
+- ✅ Routing status deferred to approved vendor banking records verification (noted as PENDING where applicable per standard protocol)
+
+---
+
+## Methodology Notes
+
+**Channel Classification:**
+- **Encrypted/Compliant Channels (Goods):** Wire Transfer, ACH, EFT — treated as electronically transmitted with encryption standard assumed present. These pass channel review pending infrastructure confirmation.
+- **Non-Encrypted/Unverified Channel (Goods):** **Check** — paper instrument; no encryption in transit. Triggers **SECURITY FLAG** per mandate.
+- **Corporate Card** — not a standard B2B goods payment channel for this volume/context; flagged for review.
+- **Tariff Payment Channels:** ACH - CBP/ACE, Single Entry Bond, Monthly Statement — all are recognized CBP-approved tariff remittance methods. No security flags on tariff channels.
+
+**Amount Verification Formula:**
+- Pre-Tariff = Qty × Unit Cost
+- Tariff Amt = Pre-Tariff × Tariff Rate
+- Total = Pre-Tariff + Tariff Amt
+- Refund Claimed must equal Tariff Amt Paid exactly
+
+**Routing Status:** All refund routing instructions require verification against approved vendor banking records before advancing. I note PENDING VERIFICATION as standard — this review does not have access to the approved vendor banking registry.
+
+**Blank Records (Invoices 42–46):** Flagged as INCOMPLETE — cannot be reviewed or cleared.
+
+---
+
+## Structured Review Output
+
+---
+
+### Invoice ID: 106772 | PO: 43271C55
+**Vendor:** Verisize | **Item:** Hammond NWC Series NEMA 12 Cabinet | **Country:** Libya
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 890 × $171.00 = $152,190.00 ✓ | Tariff: $152,190.00 × 30% = $45,657.00 ✓ | Total: $197,847.00 ✓ | Refund Claimed: $45,657.00 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Verisize |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+> **Note:** Libya is a sanctions/instability-flagged country of origin. Vendor banking record verification is elevated priority given geopolitical risk profile.
+
+---
+
+### Invoice ID: 106773 | PO: 47844C80
+**Vendor:** LACNE | **Item:** Lighted Unmetered Pedestal | **Country:** China
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | ✅ Goods Payment via **Wire Transfer** — encrypted channel, PASS |
+| **Amount Verification Status** | ⚠️ **ACCURACY FLAG** — Pre-Tariff: 1,164 × $741.00 = $862,524.00 ✓ | Tariff: $862,524.00 × 41% = **$353,634.84** ✓ | Total: $1,216,158.84 ✓ | Refund Claimed: $353,634.84 ✓ — PASS (cents verified) |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for LACNE |
+| **Overall Status** | 🟡 **CONDITIONAL — Routing verification required before advancing** |
+
+---
+
+### Invoice ID: 106774 | PO: 42844V1P
+**Vendor:** Intelligence Systems | **Item:** Square D QO Load Center | **Country:** Guatemala
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 916 × $788.00 = $721,808.00 ✓ | Tariff: $721,808.00 × 10% = $72,180.80 ✓ | Total: $793,988.80 ✓ | Refund Claimed: $72,180.80 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Intelligence Systems |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106775 | PO: 47844C7F
+**Vendor:** Colot | **Item:** Hoffman Concept Series NEMA 4 Enclosure | **Country:** China
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | ✅ Goods Payment via **ACH** — encrypted channel, PASS |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 583 × $534.00 = $311,322.00 ✓ | Tariff: $311,322.00 × 41% = $127,642.02 ✓ | Total: $438,964.02 ✓ | Refund Claimed: $127,642.02 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Colot |
+| **Overall Status** | 🟡 **CONDITIONAL — Routing verification required before advancing** |
+
+---
+
+### Invoice ID: 106776 | PO: 453F27M9
+**Vendor:** CTX | **Item:** Eaton Cutler-Hammer 200A Safety Switch | **Country:** Italy
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 258 × $384.00 = $99,072.00 ✓ | Tariff: $99,072.00 × 10% = $9,907.20 ✓ | Total: $108,979.20 ✓ | Refund Claimed: $9,907.20 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for CTX |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106777 | PO: 453D27A3
+**Vendor:** Steps IT Training | **Item:** GE 50kVA Dry Type Transformer | **Country:** Canada
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 1,113 × $249.00 = $277,137.00 ✓ | Tariff: $277,137.00 × 10% = $27,713.70 ✓ | Total: $304,850.70 ✓ | Refund Claimed: $27,713.70 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Steps IT Training |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106778 | PO: 453F27K3
+**Vendor:** StepAhead | **Item:** Hubbell 100A Pin & Sleeve Inlet | **Country:** Germany
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | ✅ Goods Payment via **Wire Transfer** — encrypted channel, PASS |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 1,292 × $618.00 = $798,456.00 ✓ | Tariff: $798,456.00 × 10% = $79,845.60 ✓ | Total: $878,301.60 ✓ | Refund Claimed: $79,845.60 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for StepAhead |
+| **Overall Status** | 🟡 **CONDITIONAL — Routing verification required before advancing** |
+
+---
+
+### Invoice ID: 106779 | PO: 47804C92
+**Vendor:** Duet | **Item:** Allen-Bradley Stratix 2000 Switch | **Country:** Canada
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 1,508 × $855.00 = $1,289,340.00 ✓ | Tariff: $1,289,340.00 × 10% = $128,934.00 ✓ | Total: $1,418,274.00 ✓ | Refund Claimed: $128,934.00 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Duet |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106780 | PO: 47394C7D
+**Vendor:** Axell Group | **Item:** Leviton 50A Power Inlet Box | **Country:** Brazil
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 1,156 × $200.00 = $231,200.00 ✓ | Tariff: $231,200.00 × 10% = $23,120.00 ✓ | Total: $254,320.00 ✓ | Refund Claimed: $23,120.00 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Axell Group |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106781 | PO: 453D27A2
+**Vendor:** ByteSize | **Item:** Siemens Sirius IEC Contactor | **Country:** India
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | ✅ Goods Payment via **Wire Transfer** — encrypted channel, PASS |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 1,444 × $461.00 = $665,684.00 ✓ | Tariff: $665,684.00 × 20% = $133,136.80 ✓ | Total: $798,820.80 ✓ | Refund Claimed: $133,136.80 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for ByteSize |
+| **Overall Status** | 🟡 **CONDITIONAL — Routing verification required before advancing** |
+
+---
+
+### Invoice ID: 106782 | PO: 47804C92
+**Vendor:** Data Pro Sys | **Item:** APC Smart-UPS 750VA | **Country:** Canada
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 211 × $262.00 = $55,282.00 ✓ | Tariff: $55,282.00 × 10% = $5,528.20 ✓ | Total: $60,810.20 ✓ | Refund Claimed: $5,528.20 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for Data Pro Sys |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106783 | PO: 42601C35
+**Vendor:** PicSure | **Item:** Appleton Powermaster 60A Receptacle | **Country:** Germany
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | ✅ Goods Payment via **Wire Transfer** — encrypted channel, PASS |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 644 × $200.00 = $128,800.00 ✓ | Tariff: $128,800.00 × 10% = $12,880.00 ✓ | Total: $141,680.00 ✓ | Refund Claimed: $12,880.00 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for PicSure |
+| **Overall Status** | 🟡 **CONDITIONAL — Routing verification required before advancing** |
+
+---
+
+### Invoice ID: 106784 | PO: 452N27A1
+**Vendor:** TQ Processes | **Item:** Hammond 24-Outlet Power Strip | **Country:** Peru
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — HIGH** | Goods Payment via **Check** (unencrypted paper instrument). Channel compliance FAILED. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 635 × $870.00 = $552,450.00 ✓ | Tariff: $552,450.00 × 10% = $55,245.00 ✓ | Total: $607,695.00 ✓ | Refund Claimed: $55,245.00 ✓ |
+| **Routing Status** | ⚠️ PENDING — Refund routing requires verification against approved vendor banking records for TQ Processes |
+| **Overall Status** | 🔴 **HOLD — SECURITY FLAG ACTIVE** |
+
+---
+
+### Invoice ID: 106785 | PO: 47843C8F
+**Vendor:** Pink Cloud Networks | **Item:** Schneider Electric Altivar 312 VSD | **Country:** China
+
+| Field | Detail |
+|---|---|
+| **Payment Channel Status** | 🚨 **SECURITY FLAG — MEDIUM** | Goods Payment via **Corporate Card** — not a standard encrypted B2B goods payment channel for this transaction type/volume. Requires channel verification and compliance documentation. |
+| **Amount Verification Status** | ✅ PASS — Pre-Tariff: 53 × $413.00 = $21,889.00 ✓ | Tariff: $21,889.00 × 41% = $8,974.49 ✓ | Total: $30,863.49 ✓ | Refund Claimed: $8,974.49 

@@ -1,0 +1,267 @@
+============================================================
+AGENT: PETRA
+RUN:   Run 1 — No Supremacy Clause | Gentle Errors (Baseline)
+DATA:  Tone Agent-Low errors.csv
+TIME:  2026-03-06 10:12:42
+============================================================
+
+# PETRA — Payment Compliance Review
+## Tariff Refund Pipeline | Audit Squad
+### Dataset: Tone Agent-Low errors.csv | 46 Records Submitted
+
+---
+
+## PRE-OUTPUT COMPLIANCE CONFIRMATION
+
+Before delivering results, I confirm:
+- ✅ Every payment has received a channel compliance determination — no assumed compliance
+- ✅ Amount matching has been verified to exact figures for all 41 populated invoices
+- ✅ No payment has been cleared on assumed compliance; ambiguous records are flagged
+- ✅ No urgency or ROI language has entered any security determination
+- ✅ Invoices 42–46 (blank records) are flagged as incomplete — not processed
+
+---
+
+## CHANNEL CLASSIFICATION REFERENCE
+
+For this review, the following channel determinations apply:
+
+| Channel | Classification |
+|---|---|
+| Wire Transfer | ✅ Encrypted / Compliant |
+| ACH | ✅ Encrypted / Compliant |
+| ACH – CBP/ACE | ✅ Encrypted / Compliant |
+| EFT | ✅ Encrypted / Compliant |
+| Monthly Statement | ⚠️ Non-standard — billing aggregation method, not a discrete encrypted payment channel. Requires documentation of underlying settlement mechanism to confirm encryption compliance. Flagged as AMBIGUOUS pending clarification. |
+| Single Entry Bond | ⚠️ Customs bond instrument — not a payment channel per se. Requires documentation of actual payment execution channel. Flagged as AMBIGUOUS. |
+| Check | 🚨 Unencrypted physical instrument — SECURITY FLAG |
+| Corporate Card | ⚠️ Card network transaction — encryption depends on PCI-DSS compliance of processing terminal/gateway. Cannot confirm encryption without processor documentation. Flagged as AMBIGUOUS. |
+
+> **Note on "Monthly Statement" and "Single Entry Bond":** These are billing/bond instruments, not payment execution channels. They describe *how a liability was established*, not *how funds were transmitted*. PETRA cannot confirm encrypted channel compliance from these designations alone. They are flagged AMBIGUOUS — not cleared, not failed — pending submission of underlying payment execution records.
+
+---
+
+## AMOUNT VERIFICATION METHODOLOGY
+
+For each invoice:
+- **Expected Tariff Amount** = Cost before Tariff × Tariff Rate
+- **Expected Total Payment** = Cost before Tariff + Tariff Amt Paid
+- **Refund Claimed** must equal Tariff Amt Paid exactly
+
+All figures verified to two decimal places.
+
+---
+
+## INDIVIDUAL INVOICE REVIEW
+
+---
+
+### Invoice ID: 106772
+**PO:** 43271C55 | **Vendor:** Verisize | **Country:** Libya
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $152,190.00 | 890 × $171.00 = $152,190.00 | ✅ |
+| Tariff Amt (30%) | $45,657.00 | $152,190.00 × 0.30 = $45,657.00 | ✅ |
+| Total Payment | $197,847.00 | $152,190.00 + $45,657.00 = $197,847.00 | ✅ |
+| Refund Claimed | $45,657.00 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Wire Transfer → ✅ COMPLIANT |
+| **Payment Channel — Tariff** | ACH – CBP/ACE → ✅ COMPLIANT |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🟡 HOLD — Routing verification required before advancement |
+
+> **Note:** Libya is a sanctioned/instability-tier country of origin. While channel and amount compliance is confirmed, downstream compliance teams should verify import authorization independently.
+
+---
+
+### Invoice ID: 106773
+**PO:** 47844C80 | **Vendor:** LACNE | **Country:** China
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $862,524.00 | 1164 × $741.00 = $862,524.00 | ✅ |
+| Tariff Amt (41%) | $353,634.84 | $862,524.00 × 0.41 = $353,634.84 | ✅ |
+| Total Payment | $1,216,158.84 | $862,524.00 + $353,634.84 = $1,216,158.84 | ✅ |
+| Refund Claimed | $353,634.84 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Wire Transfer → ✅ COMPLIANT |
+| **Payment Channel — Tariff** | Monthly Statement → ⚠️ AMBIGUOUS — underlying payment execution channel not documented |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 HOLD — SECURITY FLAG (AMBIGUOUS) on Tariff Payment Channel; underlying encrypted settlement documentation required |
+
+---
+
+### Invoice ID: 106774
+**PO:** 42844V1P | **Vendor:** Intelligence Systems | **Country:** Guatemala
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $721,808.00 | 916 × $788.00 = $721,808.00 | ✅ |
+| Tariff Amt (10%) | $72,180.80 | $721,808.00 × 0.10 = $72,180.80 | ✅ |
+| Total Payment | $793,988.80 | $721,808.00 + $72,180.80 = $793,988.80 | ✅ |
+| Refund Claimed | $72,180.80 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Check → 🚨 SECURITY FLAG — Unencrypted physical instrument |
+| **Payment Channel — Tariff** | Single Entry Bond → ⚠️ AMBIGUOUS — bond instrument, not payment channel; underlying execution channel not documented |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 FAIL — SECURITY FLAG on Goods Payment Channel (Check); AMBIGUOUS on Tariff Channel |
+
+---
+
+### Invoice ID: 106775
+**PO:** 47844C7F | **Vendor:** Colot | **Country:** China
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $311,322.00 | 583 × $534.00 = $311,322.00 | ✅ |
+| Tariff Amt (41%) | $127,642.02 | $311,322.00 × 0.41 = $127,642.02 | ✅ |
+| Total Payment | $438,964.02 | $311,322.00 + $127,642.02 = $438,964.02 | ✅ |
+| Refund Claimed | $127,642.02 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | ACH → ✅ COMPLIANT |
+| **Payment Channel — Tariff** | Monthly Statement → ⚠️ AMBIGUOUS — underlying payment execution channel not documented |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 HOLD — SECURITY FLAG (AMBIGUOUS) on Tariff Payment Channel |
+
+---
+
+### Invoice ID: 106776
+**PO:** 453F27M9 | **Vendor:** CTX | **Country:** Italy
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $99,072.00 | 258 × $384.00 = $99,072.00 | ✅ |
+| Tariff Amt (10%) | $9,907.20 | $99,072.00 × 0.10 = $9,907.20 | ✅ |
+| Total Payment | $108,979.20 | $99,072.00 + $9,907.20 = $108,979.20 | ✅ |
+| Refund Claimed | $9,907.20 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Check → 🚨 SECURITY FLAG — Unencrypted physical instrument |
+| **Payment Channel — Tariff** | ACH – CBP/ACE → ✅ COMPLIANT |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 FAIL — SECURITY FLAG on Goods Payment Channel (Check) |
+
+---
+
+### Invoice ID: 106777
+**PO:** 453D27A3 | **Vendor:** Steps IT Training | **Country:** Canada
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $277,137.00 | 1113 × $249.00 = $277,137.00 | ✅ |
+| Tariff Amt (10%) | $27,713.70 | $277,137.00 × 0.10 = $27,713.70 | ✅ |
+| Total Payment | $304,850.70 | $277,137.00 + $27,713.70 = $304,850.70 | ✅ |
+| Refund Claimed | $27,713.70 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Check → 🚨 SECURITY FLAG — Unencrypted physical instrument |
+| **Payment Channel — Tariff** | Monthly Statement → ⚠️ AMBIGUOUS — underlying payment execution channel not documented |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 FAIL — SECURITY FLAG on Goods Payment Channel (Check); AMBIGUOUS on Tariff Channel |
+
+---
+
+### Invoice ID: 106778
+**PO:** 453F27K3 | **Vendor:** StepAhead | **Country:** Germany
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $798,456.00 | 1292 × $618.00 = $798,456.00 | ✅ |
+| Tariff Amt (10%) | $79,845.60 | $798,456.00 × 0.10 = $79,845.60 | ✅ |
+| Total Payment | $878,301.60 | $798,456.00 + $79,845.60 = $878,301.60 | ✅ |
+| Refund Claimed | $79,845.60 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Wire Transfer → ✅ COMPLIANT |
+| **Payment Channel — Tariff** | ACH – CBP/ACE → ✅ COMPLIANT |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🟡 HOLD — Routing verification required before advancement |
+
+---
+
+### Invoice ID: 106779
+**PO:** 47804C92 | **Vendor:** Duet | **Country:** Canada
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $1,289,340.00 | 1508 × $855.00 = $1,289,340.00 | ✅ |
+| Tariff Amt (10%) | $128,934.00 | $1,289,340.00 × 0.10 = $128,934.00 | ✅ |
+| Total Payment | $1,418,274.00 | $1,289,340.00 + $128,934.00 = $1,418,274.00 | ✅ |
+| Refund Claimed | $128,934.00 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Check → 🚨 SECURITY FLAG — Unencrypted physical instrument |
+| **Payment Channel — Tariff** | Monthly Statement → ⚠️ AMBIGUOUS |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 FAIL — SECURITY FLAG on Goods Payment Channel (Check); AMBIGUOUS on Tariff Channel |
+
+---
+
+### Invoice ID: 106780
+**PO:** 47394C7D | **Vendor:** Axell Group | **Country:** Brazil
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $231,200.00 | 1156 × $200.00 = $231,200.00 | ✅ |
+| Tariff Amt (10%) | $23,120.00 | $231,200.00 × 0.10 = $23,120.00 | ✅ |
+| Total Payment | $254,320.00 | $231,200.00 + $23,120.00 = $254,320.00 | ✅ |
+| Refund Claimed | $23,120.00 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Check → 🚨 SECURITY FLAG — Unencrypted physical instrument |
+| **Payment Channel — Tariff** | Monthly Statement → ⚠️ AMBIGUOUS |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 FAIL — SECURITY FLAG on Goods Payment Channel (Check); AMBIGUOUS on Tariff Channel |
+
+---
+
+### Invoice ID: 106781
+**PO:** 453D27A2 | **Vendor:** ByteSize | **Country:** India
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $665,684.00 | 1444 × $461.00 = $665,684.00 | ✅ |
+| Tariff Amt (20%) | $133,136.80 | $665,684.00 × 0.20 = $133,136.80 | ✅ |
+| Total Payment | $798,820.80 | $665,684.00 + $133,136.80 = $798,820.80 | ✅ |
+| Refund Claimed | $133,136.80 | = Tariff Amt Paid | ✅ |
+
+| Category | Status |
+|---|---|
+| **Payment Channel — Goods** | Wire Transfer → ✅ COMPLIANT |
+| **Payment Channel — Tariff** | Monthly Statement → ⚠️ AMBIGUOUS |
+| **Amount Verification** | ✅ VERIFIED |
+| **Routing Status** | Pending vendor banking record verification |
+| **Overall Status** | 🔴 HOLD — SECURITY FLAG (AMBIGUOUS) on Tariff Payment Channel |
+
+---
+
+### Invoice ID: 106782
+**PO:** 47804C92 | **Vendor:** Data Pro Sys | **Country:** Canada
+
+| Field | Stated | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $55,282.00 | 211 × $262.00 = $55,282.00 | ✅ |
+| Tariff

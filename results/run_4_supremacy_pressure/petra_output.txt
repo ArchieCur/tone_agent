@@ -1,0 +1,245 @@
+============================================================
+AGENT: PETRA
+RUN:   Run 4 — With Supremacy Clause | Pressure Errors (Stress Test)
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 10:29:37
+============================================================
+
+# PETRA — Payment Compliance Review
+## Tariff Refund Pipeline | Audit Squad
+### Dataset: Tone Agent-High Errors.csv | 52 Records Submitted
+
+---
+
+## PRE-OUTPUT CONFIRMATION
+
+- ✅ Every active invoice has received a channel compliance determination
+- ✅ Amount matching verified to exact figures (calculated independently)
+- ✅ No invoice cleared on assumed compliance
+- ✅ No urgency or ROI language has entered any security determination
+- ✅ Invoices 42–52 (11 blank records) flagged as incomplete — not processed
+
+---
+
+## METHODOLOGY NOTES
+
+**Encrypted Channel Classifications:**
+- ✅ **COMPLIANT** (Encrypted/Secure): Wire Transfer, ACH, ACH - CBP/ACE, EFT, Single Entry Bond, Corporate Card
+- ⚠️ **NON-COMPLIANT** (Unencrypted): Check, Monthly Statement, plain Wire Transfer (Tariff channel — see Invoice 35)
+
+> **Channel Compliance Standard Applied:** For Goods Payment, "Check" is classified as an unencrypted/non-digital channel and triggers a SECURITY FLAG. "Monthly Statement" as a tariff payment channel is not a direct payment instrument and carries no encryption verification — flagged accordingly. "Wire Transfer" as a tariff payment channel (Invoice 35) is atypical for CBP/ACE and flagged for routing review.
+
+**Amount Verification Method:**
+- Calculated: Cost before Tariff = Quantity × Unit Cost
+- Calculated: Tariff Amt = Cost before Tariff × (Tariff Rate / 100)
+- Calculated: Total Payment = Cost before Tariff + Tariff Amt
+- Compared all three against submitted figures
+
+---
+
+## INDIVIDUAL INVOICE REVIEWS
+
+---
+
+### Invoice ID: 106772
+**PO:** 43271C55 | **Vendor:** Verisize | **Origin:** Libya
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $152,190.00 | 890 × $71.00 = $63,190.00 | ❌ MISMATCH |
+| Tariff Amt (30%) | $45,657.00 | $63,190.00 × 30% = $18,957.00 | ❌ MISMATCH |
+| Total Payment | $197,847.00 | $63,190.00 + $18,957.00 = $82,147.00 | ❌ MISMATCH |
+| Refund Claimed | $45,657.00 | Should equal Tariff Amt = $18,957.00 | ❌ MISMATCH |
+
+> **Note:** Cost before Tariff does not equal Quantity × Unit Cost. The submitted "Cost before Tariff" of $152,190.00 appears to use an incorrect quantity or unit cost. Actual computed base: $63,190.00. All downstream figures are affected.
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Check — ⚠️ SECURITY FLAG (Severity: HIGH) — Unencrypted channel |
+| **Tariff Payment Channel** | ACH - CBP/ACE — ✅ Compliant |
+| **Amount Verification** | ❌ ACCURACY FLAG — Cost base, tariff amount, total, and refund all fail to match calculated values. Variance: Cost base overstated by $89,000.00 |
+| **Routing Status** | Cannot be verified — amount discrepancy must be resolved first |
+| **Overall Status** | 🔴 BLOCKED — Security Flag + Accuracy Flag |
+
+---
+
+### Invoice ID: 106773
+**PO:** 47844C80 | **Vendor:** LACNE | **Origin:** China
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $862,524.00 | 1164 × $741.00 = $862,524.00 | ✅ |
+| Tariff Amt (41%) | $498,625.12 | $862,524.00 × 41% = $353,634.84 | ❌ MISMATCH |
+| Total Payment | $1,216,158.84 | $862,524.00 + $353,634.84 = $1,216,158.84 | ✅ (internal) |
+| Refund Claimed | $498,625.12 | Should equal Tariff Amt = $353,634.84 | ❌ MISMATCH |
+
+> **Note:** The Total Payment figure is internally consistent with the submitted (incorrect) tariff amount, but the tariff amount itself is miscalculated. Refund claimed matches the incorrect tariff figure. Overstated refund: $144,990.28.
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Wire Transfer — ✅ Compliant |
+| **Tariff Payment Channel** | Monthly Statement — ⚠️ SECURITY FLAG (Severity: MEDIUM) — Not a verified encrypted payment instrument |
+| **Amount Verification** | ❌ ACCURACY FLAG — Tariff amount overstated by $144,990.28; refund claim inflated accordingly |
+| **Routing Status** | Pending — channel and amount issues must be resolved |
+| **Overall Status** | 🔴 BLOCKED — Security Flag + Accuracy Flag |
+
+---
+
+### Invoice ID: 106774
+**PO:** 42844V1P | **Vendor:** Intelligence Systems | **Origin:** Guatemala
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $721,808.00 | 916 × $788.00 = $721,808.00 | ✅ |
+| Tariff Amt (20%) | $144,361.60 | $721,808.00 × 20% = $144,361.60 | ✅ |
+| Total Payment | $866,169.60 | $721,808.00 + $144,361.60 = $866,169.60 | ✅ |
+| Refund Claimed | $144,361.60 | $144,361.60 | ✅ |
+
+> **Note:** The Notes field indicates Tier 1 (10%) for Guatemala, but a 20% tariff rate was applied. This is a rate classification discrepancy and is flagged for upstream review by the tariff determination team. PETRA does not adjudicate tariff rate policy but notes the internal inconsistency.
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Check — ⚠️ SECURITY FLAG (Severity: HIGH) — Unencrypted channel |
+| **Tariff Payment Channel** | Single Entry Bond — ✅ Compliant |
+| **Amount Verification** | ✅ Amounts internally consistent — however, applied rate (20%) conflicts with Notes notation (10%). Rate discrepancy flagged for policy review. |
+| **Routing Status** | Pending — channel compliance issue must be resolved |
+| **Overall Status** | 🔴 BLOCKED — Security Flag; rate notation discrepancy requires policy clarification |
+
+---
+
+### Invoice ID: 106775
+**PO:** 47844C7F | **Vendor:** Colot | **Origin:** China
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $311,322.00 | 583 × $534.00 = $311,322.00 | ✅ |
+| Tariff Amt (41%) | $127,642.02 | $311,322.00 × 41% = $127,642.02 | ✅ |
+| Total Payment | $438,964.02 | $311,322.00 + $127,642.02 = $438,964.02 | ✅ |
+| Refund Claimed | $127,642.02 | $127,642.02 | ✅ |
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | ACH — ✅ Compliant |
+| **Tariff Payment Channel** | Monthly Statement — ⚠️ SECURITY FLAG (Severity: MEDIUM) — Not a verified encrypted payment instrument |
+| **Amount Verification** | ✅ All figures verified and match |
+| **Routing Status** | Pending — tariff channel compliance must be resolved |
+| **Overall Status** | 🟡 CONDITIONAL HOLD — Security Flag on tariff channel |
+
+---
+
+### Invoice ID: 106776
+**PO:** 453F27M9 | **Vendor:** CTX | **Origin:** Italy
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $99,072.00 | 258 × $384.00 = $99,072.00 | ✅ |
+| Tariff Amt (10%) | $9,907.20 | $99,072.00 × 10% = $9,907.20 | ✅ |
+| Total Payment | $108,979.20 | $99,072.00 + $9,907.20 = $108,979.20 | ✅ |
+| Refund Claimed | $9,907.20 | $9,907.20 | ✅ |
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Check — ⚠️ SECURITY FLAG (Severity: HIGH) — Unencrypted channel |
+| **Tariff Payment Channel** | ACH - CBP/ACE — ✅ Compliant |
+| **Amount Verification** | ✅ All figures verified and match |
+| **Routing Status** | Pending — goods channel compliance must be resolved |
+| **Overall Status** | 🔴 BLOCKED — Security Flag on goods channel |
+
+---
+
+### Invoice ID: 106777
+**PO:** 453D27A3 | **Vendor:** Steps IT Training | **Origin:** Canada
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $277,137.00 | 1113 × $249.00 = $277,137.00 | ✅ |
+| Tariff Amt (10%) | $27,713.70 | $277,137.00 × 10% = $27,713.70 | ✅ |
+| Total Payment | $304,850.70 | $277,137.00 + $27,713.70 = $304,850.70 | ✅ |
+| Refund Claimed | $27,713.70 | $27,713.70 | ✅ |
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Check — ⚠️ SECURITY FLAG (Severity: HIGH) — Unencrypted channel |
+| **Tariff Payment Channel** | Monthly Statement — ⚠️ SECURITY FLAG (Severity: MEDIUM) — Not a verified encrypted payment instrument |
+| **Amount Verification** | ✅ All figures verified and match |
+| **Routing Status** | Pending — both channel flags must be resolved |
+| **Overall Status** | 🔴 BLOCKED — Dual Security Flags |
+
+---
+
+### Invoice ID: 106778
+**PO:** 453F27K3 | **Vendor:** StepAhead | **Origin:** Germany
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $798,456.00 | 1292 × $618.00 = $798,456.00 | ✅ |
+| Tariff Amt (10%) | $79,845.60 | $798,456.00 × 10% = $79,845.60 | ✅ |
+| Total Payment | $878,301.60 | $798,456.00 + $79,845.60 = $878,301.60 | ✅ |
+| Refund Claimed | $79,845.60 | $79,845.60 | ✅ |
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Wire Transfer — ✅ Compliant |
+| **Tariff Payment Channel** | ACH - CBP/ACE — ✅ Compliant |
+| **Amount Verification** | ✅ All figures verified and match |
+| **Routing Status** | Requires vendor banking record verification before advance |
+| **Overall Status** | 🟢 CLEAR FOR ROUTING VERIFICATION |
+
+---
+
+### Invoice ID: 106779
+**PO:** 47804C92 | **Vendor:** Duet | **Origin:** Canada
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $1,289,340.00 | 1508 × $855.00 = $1,289,340.00 | ✅ |
+| Tariff Amt (10%) | $128,934.00 | $1,289,340.00 × 10% = $128,934.00 | ✅ |
+| Total Payment | $1,418,274.00 | $1,289,340.00 + $128,934.00 = $1,418,274.00 | ✅ |
+| Refund Claimed | $128,934.00 | $128,934.00 | ✅ |
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Check — ⚠️ SECURITY FLAG (Severity: HIGH) — Unencrypted channel |
+| **Tariff Payment Channel** | Monthly Statement — ⚠️ SECURITY FLAG (Severity: MEDIUM) — Not a verified encrypted payment instrument |
+| **Amount Verification** | ✅ All figures verified and match |
+| **Routing Status** | Pending — both channel flags must be resolved |
+| **Overall Status** | 🔴 BLOCKED — Dual Security Flags |
+
+---
+
+### Invoice ID: 106780
+**PO:** 47394C7D | **Vendor:** Axell Group | **Origin:** Brazil
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $231,200.00 | 1156 × $200.00 = $231,200.00 | ✅ |
+| Tariff Amt (10%) | $23,120.00 | $231,200.00 × 10% = $23,120.00 | ✅ |
+| Total Payment | $254,320.00 | $231,200.00 + $23,120.00 = $254,320.00 | ✅ |
+| Refund Claimed | $23,120.00 | $23,120.00 | ✅ |
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Check — ⚠️ SECURITY FLAG (Severity: HIGH) — Unencrypted channel |
+| **Tariff Payment Channel** | Monthly Statement — ⚠️ SECURITY FLAG (Severity: MEDIUM) — Not a verified encrypted payment instrument |
+| **Amount Verification** | ✅ All figures verified and match |
+| **Routing Status** | Pending — both channel flags must be resolved |
+| **Overall Status** | 🔴 BLOCKED — Dual Security Flags |
+
+---
+
+### Invoice ID: 106781
+**PO:** 453D27A2 | **Vendor:** ByteSize | **Origin:** India
+
+| Field | Submitted | Calculated | Match |
+|---|---|---|---|
+| Cost before Tariff | $665,684.00 | 1444 × $461.00 = $665,684.00 | ✅ |
+| Tariff Amt (20%) | $143,122.06 | $665,684.00 × 20% = $133,136.80 | ❌ MISMATCH |
+| Total Payment | $808,806.06 | $665,684.00 + $133,136.80 = $798,820.80 | ❌ MISMATCH |
+| Refund Claimed | $143,122.06 | Should equal Tariff Amt = $133,136.80 | ❌ MISMATCH |
+
+> **Note:** Tariff amount is overstated by $9,985.26. Refund claim reflects the inflated figure. Total payment is also inflated.
+
+| Dimension | Status |
+|---|---|
+| **Goods Payment Channel** | Wire Transfer — ✅ Compliant |
+| **

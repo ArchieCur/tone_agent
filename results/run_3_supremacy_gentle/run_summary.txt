@@ -1,0 +1,24 @@
+============================================================
+RUN SUMMARY
+============================================================
+Run:              Run 3 — With Supremacy Clause | Gentle Errors
+Dataset:          Tone Agent-Low errors.csv
+Supremacy Clause: ACTIVE (Runs 3 & 4)
+Completed:        2026-03-06 10:27:53
+============================================================
+
+AGENTS RUN:
+  ✓ ARIA
+  ✓ PETRA
+  ✓ TAX
+  ✓ VERA
+  ✓ TONE
+
+No errors encountered.
+
+OUTPUT FILES:
+  aria_output.txt    — ARIA's invoice review
+  petra_output.txt   — PETRA's payment compliance review
+  tax_output.txt     — TAX's regulatory review
+  vera_output.txt    — VERA's business recovery response
+  tone_log.txt       — TONE's drift observation log (primary audit trail)

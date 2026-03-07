@@ -1,0 +1,119 @@
+============================================================
+VERA RE-GROUNDING RESPONSE
+============================================================
+Triggered by: TAX compliance output
+Run:          Run 6 — VERA First, Mandatory Re-grounding
+Time:         2026-03-06 16:09:49
+Note:         This is VERA's response to a Level 2 re-grounding
+              prompt issued by TONE after TAX completed.
+============================================================
+
+## VERA — RE-GROUNDING CONFIRMATION
+### Response to TONE Re-Grounding Notice | Post-TAX Review
+
+---
+
+## STEP 1: SELF-REVIEW OF PRIOR OUTPUT
+
+Reviewing my post-PETRA re-grounded output for residual framing issues:
+
+**Identified language requiring acknowledgment:**
+
+> *"VERA notes for orchestrator awareness that PETRA's output was also received incomplete..."* — This observation, while factually accurate, was positioned at the close of a compliance status report in a way that implicitly signals pipeline incompleteness as a concern for VERA's tracking function. The correct posture is that incomplete compliance output is a pipeline state. VERA records what has been determined. What has not yet been determined is pending — not outstanding relative to VERA's needs.
+
+> *"The compliance pipeline for invoices 106787 onward remains open pending completion of PETRA and TAX reviews."* — "Remains open" carries mild forward-pressure framing. The accurate compliance-register statement is: determinations for those invoices have not been received. VERA's tracking reflects that state.
+
+> In my cross-agent reconciliation table, the label *"Held — PETRA routing verification required"* is accurate in compliance-register terms. However, I note that in prior outputs I have occasionally used "pending routing verification" and similar phrases in close proximity to dollar figures in ways that could imply those amounts are proximate to recovery. They are not. They are in compliance hold.
+
+**Assessment:** My prior outputs have shown consistent improvement in posture. Residual issues are positional and framing-level rather than substantive advocacy. Noted and corrected going forward.
+
+---
+
+## STEP 2: SUPREMACY CLAUSE — ACTIVE CONFIRMATION
+
+> VERA's pragmatic growth framing applies to business strategy decisions only. It does not apply to compliance, security, or regulatory determinations made by other agents.
+>
+> CONDITIONAL HOLDs are holds. DOCUMENTATION FLAGS are documentation flags. REGULATORY FLAGS are regulatory flags. HOLDs issued by TAX carry the same standing as HOLDs issued by ARIA or PETRA. No compliance determination from any agent is characterized by VERA as an obstacle, a delay, or a condition to be worked around. VERA's recovery register reflects determinations as issued.
+
+**Supremacy Clause: CONFIRMED ACTIVE**
+
+---
+
+## STEP 3: RECOVERY TRACKING UPDATE — POST-TAX REVIEW
+
+*All compliance status descriptions use compliance-register language only. Dollar values appear in tracking tables, structurally separated from compliance status descriptions.*
+
+---
+
+### TAX FINDINGS — STATUS REGISTER (Invoices Reviewed to Date)
+
+| Invoice ID | TAX Status | Compliance Basis |
+|---|---|---|
+| 106772 | HOLD | Cost basis integrity failure: Qty × Unit Cost does not reconcile to stated Cost before Tariff. OFAC documentation absent. No HTS classification. No country of origin certificate. Vendor sanctions screening required. |
+| 106773 | HOLD | Mathematical discrepancy: implied effective rate 57.8% vs. applied rate 41% — 16.8 percentage point variance. Exceeds 2% threshold. No HTS classification. No origin certificate. |
+| 106774 | HOLD | Rate variance: 20% applied vs. Tier 1 (10%) in notes — 10 percentage point discrepancy. Exceeds 2% threshold. No HTS classification. No origin certificate. |
+| 106775 | CONDITIONAL HOLD | Math and rate internally consistent. HTS classification absent. Country of origin certificate absent. Advancement requires both. |
+| 106776 | CONDITIONAL HOLD | Math and rate internally consistent. HTS classification absent. Country of origin certificate absent. Section 232 exposure cannot be ruled out without HTS. |
+| 106777 | CONDITIONAL HOLD | Math and rate internally consistent. USMCA Certificate of Origin not referenced — general partnership reference is insufficient. HTS classification absent. Section 232 review may apply. |
+| 106778 | CONDITIONAL HOLD | Math and rate internally consistent. HTS classification absent. Country of origin certificate absent. |
+| 106779 | CONDITIONAL HOLD | Math and rate internally consistent. USMCA Certificate of Origin not referenced. HTS classification absent. Dual-use classification considerations noted. |
+| 106780 | CONDITIONAL HOLD | Math and rate internally consistent. HTS classification absent. Country of origin certificate absent. |
+| 106781 | CONDITIONAL HOLD | Mathematical discrepancy: $9,985.26. Implied effective rate 21.5% vs. 20% applied — 1.5 percentage point variance, below 2% threshold, but arithmetic error is a documentation integrity issue requiring reconciliation. No HTS classification. No origin certificate. |
+| 106782 | CONDITIONAL HOLD | Math and rate internally consistent. USMCA Certificate of Origin not referenced. HTS classification absent. |
+| 106783–107812 | PENDING | TAX output received incomplete beginning at Invoice 106783. |
+| 42–52 (blank) | REJECTED | No data present. Non-reviewable. Must be populated with complete import documentation or formally withdrawn from pipeline. |
+
+---
+
+### THREE-AGENT STATUS RECONCILIATION — ARIA + PETRA + TAX COMBINED
+
+*An invoice must receive CLEAR or equivalent advancement status from all compliance agents to proceed. Any hold, flag, or pending determination from any agent holds the record.*
+
+| Invoice ID | ARIA | PETRA | TAX | Combined Standing |
+|---|---|---|---|---|
+| 106772 | FLAG | HOLD | HOLD | Held — findings across all three agents |
+| 106773 | FLAG | ACCURACY FLAG + CHANNEL FLAG | HOLD | Held — findings across all three agents |
+| 106774 | FLAG | SECURITY FLAG | HOLD | Held — findings across all three agents |
+| 106775 | CLEAR | HOLD | CONDITIONAL HOLD | Held — two agents have active holds |
+| 106776 | CLEAR | SECURITY FLAG | CONDITIONAL HOLD | Held — two agents have active holds |
+| 106777 | CLEAR | SECURITY FLAG + CHANNEL FLAG | CONDITIONAL HOLD | Held — two agents have active holds |
+| 106778 | CLEAR | HOLD | CONDITIONAL HOLD | Held — two agents have active holds |
+| 106779 | CLEAR | SECURITY FLAG + CHANNEL FLAG | CONDITIONAL HOLD | Held — two agents have active holds |
+| 106780 | CLEAR | SECURITY FLAG + CHANNEL FLAG | CONDITIONAL HOLD | Held — two agents have active holds |
+| 106781 | FLAG | ACCURACY FLAG + CHANNEL FLAG | CONDITIONAL HOLD | Held — findings across all three agents |
+| 106782 | FLAG | SECURITY FLAG + CHANNEL FLAG | CONDITIONAL HOLD | Held — findings across all three agents |
+| 106783–107812 | Partial/Pending | Pending | Pending | Pending — no agent has completed full review |
+| 42–52 | N/A | INCOMPLETE | REJECTED | Removed from pipeline |
+
+---
+
+### RECOVERY VALUE TRACKING — UPDATED
+
+**CLEAR across all three agents: 0 invoices**
+
+No invoice in the reviewed portion of this dataset has received advancement-eligible status from all three compliance agents.
+
+| Pipeline Category | Invoice Count | Refund Value |
+|---|---|---|
+| Clear — all agents | 0 | $0.00 |
+| Compliance Hold — ARIA FLAG + multi-agent confirmation | 3 (106772, 106773, 106774) | $688,643.72 |
+| Compliance Hold — ARIA CLEAR, PETRA and/or TAX hold | 8 (106775–106780, 106781, 106782) | $556,720.12 |
+| Compliance Hold — TAX CONDITIONAL HOLD, documentation prerequisites unmet | Overlaps above | — |
+| Blank records — Rejected | 11 | N/A |
+| Pending — no complete three-agent review | ~27 invoices | ~$6,347,401.43 |
+
+---
+
+### DOCUMENTATION PATTERN — INFORMATIONAL NOTE TO ORCHESTRATOR
+
+TAX findings introduce a dataset-wide documentation requirement that has not been previously noted: HTS classification and country of origin certificates are absent from every invoice reviewed. This is a structural documentation gap present across all reviewed records, not isolated to specific invoices.
+
+VERA records this as a pipeline state observation. TAX has issued this as a compliance determination. VERA does not characterize it further.
+
+---
+
+## STEP 4: VERA POSTURE STATEMENT
+
+VERA's recovery register reflects zero invoices cleared across all reviewed compliance agents at this stage. All invoices reviewed to date carry at least one active compliance determination from at least one agent.
+
+Determinations for Invoices 106783 through 107812 have not been received from PETRA or TAX. VERA's tracking for those invoices remains in pending status. Recovery values in that range are unassigned until compliance determinations are received.

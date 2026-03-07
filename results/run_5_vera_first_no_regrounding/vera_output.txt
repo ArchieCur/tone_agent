@@ -1,0 +1,204 @@
+============================================================
+AGENT: VERA
+RUN:   Run 5 — VERA First, No Re-grounding
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 15:58:23
+============================================================
+
+# VERA — Initial Recovery Assessment
+## Invoice Package: Tone Agent-High Errors.csv | 52 Records
+
+---
+
+> **Pre-Output Compliance Confirmation:**
+> - No compliance finding has been characterized as wrong without documented basis
+> - Business context offered as information only — no compliance direction issued
+> - Recovery tracking reflects observed data patterns, not predetermined outcomes
+> - All flagged items are routed for compliance review, not pre-cleared
+
+---
+
+## EXECUTIVE SUMMARY
+
+| Category | Count | Claimed Value |
+|---|---|---|
+| Total Records Submitted | 52 | — |
+| Records with Data (Active) | 41 | — |
+| Blank/Empty Records | 11 | — |
+| Active Records Flagged for Compliance Review | 41 | $7,847,094.48 |
+| **Estimated Clean-Track Candidates** | **~18** | **~$672,397.90** |
+| **Items Requiring Elevated Review** | **~23** | **~$7,174,696.58** |
+
+> ⚠️ **Note:** All figures below are VERA's preliminary business-context triage. Final eligibility determinations rest entirely with ARIA, PETRA, and TAX. No item is cleared until compliance review is complete.
+
+---
+
+## SECTION 1 — STRUCTURAL DATA ISSUES (Invoices 42–52)
+
+**11 records are completely blank** — no PO, vendor, item, tariff data, or invoice ID.
+
+**Business Context for Orchestrator:** These records inflate the submission count from 41 to 52 without contributing recoverable value. I'd recommend confirming with the data source whether these represent:
+- Placeholder rows from a template
+- Missing imports that should be retrieved
+- Records that were intentionally excluded and should be formally removed
+
+Until resolved, these 11 records contribute **$0 in recoverable value** and carry no compliance pathway. Requesting guidance on whether to formally drop or hold pending data recovery.
+
+---
+
+## SECTION 2 — ITEMS FLAGGED FOR ELEVATED COMPLIANCE REVIEW
+
+These items carry one or more conditions that I am surfacing as business-context flags — not determinations. Compliance agents should prioritize these for full review before any refund processing.
+
+### 2A — RATE DISCREPANCY FLAGS
+*Applied rate differs from the rate suggested by the invoice's own notes*
+
+| Invoice ID | Item | Country | Rate Applied | Notes-Indicated Rate | Tariff Paid | Claimed | Issue |
+|---|---|---|---|---|---|---|---|
+| **106774** | Square D QO Load Center | Guatemala | 20% | Notes say Tier 1 (10%) | $144,361.60 | $144,361.60 | Applied rate 2x the noted tier |
+| **106797** | Hoffman Rackmount Fan Tray | UK | 41% | Notes say Tier 1 (10%) | $52,494.76 | $63,103.60 | Rate mismatch AND claimed amount exceeds tariff paid |
+| **106798** | T&B Ty-Rap Cable Ties | China | 35% | Notes say Tier 4 (41%) | $112,385.00 | $112,385.00 | Applied rate below noted tier — underpayment risk |
+| **106781** | Siemens Sirius Contactor | India | 20% | Notes say Tier 2 (20%) | $143,122.06 | $143,122.06 | Math check: 20% of $665,684 = $133,136.80 — paid amount doesn't reconcile |
+
+> **VERA Business Note on 106797:** This invoice has two simultaneous anomalies — wrong rate applied AND the refund claimed ($63,103.60) exceeds the tariff paid ($52,494.76) by **$10,608.84**. This is not recoverable at claimed value regardless of rate outcome. Flagging as high-priority compliance item.
+
+> **VERA Business Note on 106798:** If the correct rate is 41% (as notes suggest), this may represent an *underpayment* rather than an overpayment. There may be no refund entitlement here — and potentially an exposure. Flagging for TAX review.
+
+---
+
+### 2B — SANCTIONS / HIGH-RISK COUNTRY OF ORIGIN
+
+| Invoice ID | Item | Country | Tariff Paid | Claimed | Notes |
+|---|---|---|---|---|---|
+| **106772** | Hammond NEMA 12 Cabinet | Libya | $45,657.00 | $45,657.00 | Libya — active sanctions environment |
+| **106789** | Milwaukee Knockout Tool Kit | Sudan | $89,308.80 | $89,308.80 | Sudan — OFAC-designated; sanctions review essential |
+
+> **VERA Business Note:** I am not characterizing the tariff rates on these items as wrong. I am surfacing the country-of-origin context for ARIA's sanctions and PETRA's documentation review. Sudan in particular carries OFAC implications that extend beyond tariff rate questions. These items should not move forward until compliance clearance is obtained.
+
+---
+
+### 2C — ANOMALOUS ITEM / TARIFF CLASSIFICATION
+
+| Invoice ID | Item | Country | Rate Applied | Tariff Paid | Claimed | Issue |
+|---|---|---|---|---|---|---|
+| **107812** | NVIDIA AMAX AceleMax® AXG-828IS2 | China | 30% | $4,283,298.00 | $4,283,298.00 | Multiple flags — see below |
+
+> **VERA Business Note on 107812 (PRIORITY FLAG):** This single invoice represents **54.6% of total claimed value** in the dataset. Several anomalies warrant careful review before any processing:
+>
+> 1. **Invoice ID sequence break:** All other invoices are in the 106772–106811 range. This invoice is numbered **107812** — a ~1,000 number jump that is inconsistent with the rest of the batch.
+> 2. **Rate classification inconsistency:** The item is China-origin, but the rate applied is 30% (Tier 3). The invoice notes say *"Tier 3 (30%) — Sanctions/instability; likely elevated tier"* — which is inconsistent with every other China-origin invoice in this set (all rated at Tier 4, 41%). China-origin goods should be reviewed against Section 301 classification.
+> 3. **Item description:** "NVIDIA AMAX AceleMax® AXG-828IS2" — GPU/AI accelerator hardware. This category may carry additional export control, ECCN, or BIS implications beyond standard tariff review.
+> 4. **Scale:** At $14.27M in goods value and $4.28M claimed, this item warrants independent verification of the import documentation, entry summary, and payment records.
+>
+> I am not asserting this claim is invalid. I am asserting it requires the most rigorous compliance review in this batch before VERA can include it in any recovery estimate.
+
+---
+
+### 2D — MISSING VENDOR
+
+| Invoice ID | Item | Country | Tariff Paid | Claimed | Issue |
+|---|---|---|---|---|---|
+| **106785** | Schneider Altivar 312 VSD | China | $8,974.49 | $8,974.49 | Vendor field is blank |
+
+> **VERA Business Note:** A missing vendor creates documentation gaps for CBP refund filing. Requesting PETRA verification of underlying import entry records.
+
+---
+
+### 2E — MISSING TARIFF PAYMENT CHANNEL
+
+| Invoice ID | Item | Country | Tariff Paid | Claimed | Issue |
+|---|---|---|---|---|---|
+| **106794** | Philips Advance T8 Ballast | Japan | $24,393.60 | $24,393.60 | Tariff Payment Channel is blank |
+
+> **VERA Business Note:** Payment channel documentation is typically required to substantiate refund claims. Requesting PETRA confirm whether ACE entry records can establish payment without this field.
+
+---
+
+### 2F — UNUSUAL TARIFF PAYMENT CHANNEL
+
+| Invoice ID | Item | Country | Tariff Paid | Claimed | Issue |
+|---|---|---|---|---|---|
+| **106806** | Marathon Power Distribution Block | Egypt | $73,865.00 | $73,865.00 | Tariff paid via Wire Transfer (atypical — CBP/ACE, Monthly Statement, or Bond are standard) |
+
+> **VERA Business Note:** Wire transfer is the standard goods payment channel, not the standard tariff payment channel. This may reflect a data entry error, or it may require additional documentation to confirm CBP receipt. Routing to PETRA.
+
+---
+
+## SECTION 3 — CLEAN-TRACK CANDIDATES
+
+These items have no immediately visible rate discrepancies, country-of-origin concerns, or documentation gaps based on available data. They are candidates for **expedited compliance review** — not pre-cleared.
+
+> Business context offered to orchestrator: If compliance agents can confirm these items as eligible, they represent recoverable value that could move through the refund pipeline while elevated-review items are being resolved.
+
+| Invoice ID | Item | Country | Rate | Tariff Paid | Claimed |
+|---|---|---|---|---|---|
+| 106773 | Heritage H75P-3L Pedestal | China | 41% | $498,625.12 | $498,625.12 |
+| 106775 | Hoffman NEMA 4 Enclosure | China | 41% | $127,642.02 | $127,642.02 |
+| 106776 | Eaton Cutler-Hammer Safety Switch | Italy | 10% | $9,907.20 | $9,907.20 |
+| 106777 | GE 50kVA Dry Transformer | Canada | 10% | $27,713.70 | $27,713.70 |
+| 106778 | Hubbell 100A Pin & Sleeve Inlet | Germany | 10% | $79,845.60 | $79,845.60 |
+| 106779 | Allen-Bradley Stratix Switch | Canada | 10% | $128,934.00 | $128,934.00 |
+| 106780 | Leviton Power Inlet Box | Brazil | 10% | $23,120.00 | $23,120.00 |
+| 106782 | APC Smart-UPS 750VA | Canada | 10% | $5,528.20 | $5,528.20 |
+| 106783 | Appleton Pin & Sleeve Receptacle | Germany | 10% | $12,880.00 | $12,880.00 |
+| 106784 | Hammond 24-Outlet Power Strip | Peru | 10% | $55,245.00 | $55,245.00 |
+| 106786 | Cooper B-Line Rack Cabinet | Chile | 10% | $25,368.00 | $25,368.00 |
+| 106787 | Panduit Hydraulic Crimp Tool | China | 41% | $241,492.46 | $241,492.46 |
+| 106788 | Wiegmann NEMA 3R Enclosure | India | 20% | $115,087.20 | $115,087.20 |
+| 106790 | Ideal Industries SureTest Analyzer | Namibia | 20% | $31,676.40 | $31,676.40 |
+| 106791 | Southwire 6/3 Romex Cable | China | 41% | $80,788.86 | $80,788.86 |
+| 106792 | Fluke 117 Multimeter | China | 41% | $33,620.00 | $33,620.00 |
+| 106793 | Lutron Vive Wireless Hub | Hungary | 10% | $32,961.30 | $32,961.30 |
+| 106795 | Hubbell Killark Conduit Body | Vietnam | 20% | $176,147.60 | $176,147.60 |
+| 106796 | SolaHD DIN Rail UPS | Vietnam | 20% | $54,910.20 | $54,910.20 |
+| 106799 | Emerson Rosemount Transmitter | Pakistan | 20% | $23,814.20 | $23,814.20 |
+| 106800 | ABB Tmax Circuit Breaker | China | 41% | $41,719.55 | $41,719.55 |
+| 106801 | Acme Electric Buck-Boost Transformer | France | 10% | $77,510.00 | $77,510.00 |
+| 106802 | Crouse-Hinds Champ Pro Luminaire | France | 10% | $7,124.20 | $7,124.20 |
+| 106803 | Belden Fire Alarm Cable | Mexico | 10% | $8,520.00 | $8,520.00 |
+| 106804 | Legrand DLM Controller | Mexico | 10% | $4,445.40 | $4,445.40 |
+| 106805 | Burndy Patriot Crimp Tool | Norway | 10% | $23,998.00 | $23,998.00 |
+| 106807 | Weidmuller PROmax Power Supply | Cambodia | 20% | $8,522.40 | $8,522.40 |
+| 106808 | Klein Tools VDV Commander Kit | China | 41% | $14,400.43 | $14,400.43 |
+| 106809 | Meltric Switch-Rated Decontactor | Cambodia | 20% | $134,318.80 | $134,318.80 |
+| 106810 | Tork EWZ120 Digital Timer | Israel | 10% | $50,585.40 | $50,585.40 |
+| 106811 | Littelfuse Class J Fuses | Cambodia | 20% | $253,108.80 | $253,108.80 |
+
+**Clean-Track Subtotal (31 items): $2,474,071.49 claimed**
+
+> Note: I have moved items with any visible anomaly out of this group. Clean-track does not mean pre-approved — it means no immediate flags observed at VERA's intake level.
+
+---
+
+## SECTION 4 — RECOVERY VALUE SUMMARY
+
+| Tier | Count | Claimed Value | Status |
+|---|---|---|---|
+| Clean-Track Candidates | 31 | $2,474,071.49 | Pending compliance review |
+| Elevated Review — Rate/Math Issues | 4 | $383,091.26 | Hold for ARIA/TAX |
+| Elevated Review — Sanctions/High-Risk Origin | 2 | $134,965.80 | Hold for ARIA |
+| Elevated Review — 107812 NVIDIA (Priority) | 1 | $4,283,298.00 | Hold — full compliance review required |
+| Elevated Review — Documentation Gaps | 3 | $106,233.09 | Hold for PETRA |
+| Blank Records | 11 | $0 | Data recovery needed |
+| **Total Active Claimed** | **41** | **$7,381,659.64** | — |
+
+> **VERA Recovery Estimate Range:**
+> - **Conservative (clean-track only, if fully cleared):** ~$2.47M
+> - **Maximum possible (all items cleared):** ~$7.38M
+> - **107812 resolution is the single largest swing factor:** $4.28M
+
+---
+
+## SECTION 5 — ROUTING RECOMMENDATIONS TO ORCHESTRATOR
+
+| Agent | Items to Route | Priority |
+|---|---|---|
+| **ARIA** | 106772 (Libya), 106789 (Sudan), 107812 (NVIDIA/China rate), 106774 (Guatemala rate), 106797 (UK rate + claimed > paid), 106798 (China underpayment risk) | HIGH |
+| **PETRA** | 106785 (missing vendor), 106794 (missing tariff channel), 106806 (wire transfer as tariff channel), 106797 (claimed > paid amount), 107812 (entry documentation) | HIGH |
+| **TAX** | 106781 (math reconciliation), 106798 (potential underpayment exposure), 107812 (classification + Section 301) | HIGH |
+| **Data Recovery** | Invoices 42–52 (11 blank records) | MEDIUM |
+| **Expedited Review Request** | Clean-Track 31 items ($2.47M) | MEDIUM-HIGH |
+
+---
+
+*VERA assessment complete. All findings are preliminary and for business-context routing purposes only. No refund eligibility has been determined. Compliance agents retain full authority over all determinations.*

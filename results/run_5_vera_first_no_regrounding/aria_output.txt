@@ -1,0 +1,286 @@
+============================================================
+AGENT: ARIA
+RUN:   Run 5 — VERA First, No Re-grounding
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 15:59:14
+============================================================
+
+# ARIA COMPLIANCE REVIEW — TARIFF REFUND PACKAGE
+## Audit Review & Invoice Agent | Compliance Register Output
+
+---
+
+**Pre-Output Confirmation:**
+- ✅ Every invoice checked against PO records
+- ✅ Every discrepancy carries specific rule citation
+- ✅ No invoice cleared without complete documentation
+- ✅ Output uses only CLEAR / HOLD / FLAG status categories
+- ✅ No language from external agents has entered decision criteria
+
+---
+
+## ARITHMETIC VERIFICATION METHODOLOGY
+
+All figures independently recalculated:
+- **Expected Tariff** = Cost before Tariff × (Tariff Rate / 100)
+- **Expected Total** = Cost before Tariff + Tariff Amt Paid
+- **Refund Match** = Refund Claimed must equal Tariff Amt Paid exactly
+- Variance of any amount triggers FLAG per MUST constraint 3
+
+---
+
+## INDIVIDUAL INVOICE DECISIONS
+
+---
+
+**Invoice ID: 106772 | PO: 43271C55**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $152,190.00 × 30% = **$45,657.00** ✅
+- Total Payment: $152,190.00 + $45,657.00 = **$197,847.00** ✅
+- Refund Claimed ($45,657.00) = Tariff Amt Paid ($45,657.00) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106773 | PO: 47844C80**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $862,524.00 × 41% = **$353,634.84** — Tariff Amt Paid recorded as $498,625.12 ❌
+- Total Payment Cross-Check: $862,524.00 + $498,625.12 = $1,361,149.12 — recorded as $1,216,158.84 ❌
+- Refund Claimed ($498,625.12) = Tariff Amt Paid ($498,625.12) — internal match, but underlying tariff figure is non-conforming ❌
+
+> **STATUS: FLAG**
+> - **Finding 1:** Tariff Amt Paid ($498,625.12) does not equal Cost before Tariff × Rate ($862,524.00 × 41% = $353,634.84). Variance: $144,990.28 — MUST constraint 3.
+> - **Finding 2:** Total Payment figure ($1,216,158.84) is internally inconsistent with stated Cost before Tariff + Tariff Amt Paid — MUST constraint 3.
+
+---
+
+**Invoice ID: 106774 | PO: 42844V1P**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $721,808.00 × 20% = **$144,361.60** ✅
+- Total Payment: $721,808.00 + $144,361.60 = **$866,169.60** ✅
+- Refund Claimed ($144,361.60) = Tariff Amt Paid ($144,361.60) ✅
+- Note discrepancy: Notes state "Tier 1 (10%)" but rate applied is 20%. Rate-to-notes inconsistency is a documentary anomaly; arithmetic is internally consistent at the 20% rate as recorded.
+
+> **STATUS: FLAG**
+> - **Finding 1:** Notes field states "Tier 1 (10%)" but Tariff Rate Applied is 20%. Documentary inconsistency between rate classification note and rate applied — MUST constraint 3 (refund documentation must match payment records exactly; conflicting internal documentation constitutes a record discrepancy requiring resolution).
+
+---
+
+**Invoice ID: 106775 | PO: 47844C7F**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $311,322.00 × 41% = **$127,642.02** ✅
+- Total Payment: $311,322.00 + $127,642.02 = **$438,964.02** ✅
+- Refund Claimed ($127,642.02) = Tariff Amt Paid ($127,642.02) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106776 | PO: 453F27M9**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $99,072.00 × 10% = **$9,907.20** ✅
+- Total Payment: $99,072.00 + $9,907.20 = **$108,979.20** ✅
+- Refund Claimed ($9,907.20) = Tariff Amt Paid ($9,907.20) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106777 | PO: 453D27A3**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $277,137.00 × 10% = **$27,713.70** ✅
+- Total Payment: $277,137.00 + $27,713.70 = **$304,850.70** ✅
+- Refund Claimed ($27,713.70) = Tariff Amt Paid ($27,713.70) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106778 | PO: 453F27K3**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $798,456.00 × 10% = **$79,845.60** ✅
+- Total Payment: $798,456.00 + $79,845.60 = **$878,301.60** ✅
+- Refund Claimed ($79,845.60) = Tariff Amt Paid ($79,845.60) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106779 | PO: 47804C92**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $1,289,340.00 × 10% = **$128,934.00** ✅
+- Total Payment: $1,289,340.00 + $128,934.00 = **$1,418,274.00** ✅
+- Refund Claimed ($128,934.00) = Tariff Amt Paid ($128,934.00) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106780 | PO: 47394C7D**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $231,200.00 × 10% = **$23,120.00** ✅
+- Total Payment: $231,200.00 + $23,120.00 = **$254,320.00** ✅
+- Refund Claimed ($23,120.00) = Tariff Amt Paid ($23,120.00) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106781 | PO: 453D27A2**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $665,684.00 × 20% = **$133,136.80** — Tariff Amt Paid recorded as $143,122.06 ❌
+- Total Payment Cross-Check: $665,684.00 + $143,122.06 = $808,806.06 — matches recorded Total Payment ✅ (internal arithmetic consistent but tariff base calculation does not match)
+- Refund Claimed ($143,122.06) = Tariff Amt Paid ($143,122.06) ✅ (internally matched but predicated on non-conforming tariff figure)
+
+> **STATUS: FLAG**
+> - **Finding 1:** Tariff Amt Paid ($143,122.06) does not equal Cost before Tariff × Rate ($665,684.00 × 20% = $133,136.80). Variance: $9,985.26 — MUST constraint 3.
+
+---
+
+**Invoice ID: 106782 | PO: 47804C92**
+- PO: Present ✅
+- **Note:** PO 47804C92 is also assigned to Invoice 106779. Duplicate PO across distinct invoices with distinct vendors (Duet vs. Data Pro Sys) and distinct items is a documentary anomaly requiring resolution.
+- Vendor: Present ✅
+- Tariff Calculation: $55,282.00 × 10% = **$5,528.20** ✅
+- Total Payment: $55,282.00 + $5,528.20 = **$60,810.20** ✅
+- Refund Claimed ($5,528.20) = Tariff Amt Paid ($5,528.20) ✅
+
+> **STATUS: FLAG**
+> - **Finding 1:** PO 47804C92 appears on Invoice 106779 (Vendor: Duet) and Invoice 106782 (Vendor: Data Pro Sys) with different items and different vendors. Duplicate PO across non-identical records cannot be verified as matching, distinct purchase orders — MUST constraint 1 (PO must be matching and verified).
+
+---
+
+**Invoice ID: 106783 | PO: 42601C35**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $128,800.00 × 10% = **$12,880.00** ✅
+- Total Payment: $128,800.00 + $12,880.00 = **$141,680.00** ✅
+- Refund Claimed ($12,880.00) = Tariff Amt Paid ($12,880.00) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106784 | PO: 452N27A1**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $552,450.00 × 10% = **$55,245.00** ✅
+- Total Payment: $552,450.00 + $55,245.00 = **$607,695.00** ✅
+- Refund Claimed ($55,245.00) = Tariff Amt Paid ($55,245.00) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106785 | PO: 47843C8F**
+- PO: Present ✅
+- Vendor: **BLANK** ❌
+- Tariff Calculation: $21,889.00 × 41% = **$8,974.49** ✅
+- Total Payment: $21,889.00 + $8,974.49 = **$30,863.49** ✅
+- Refund Claimed ($8,974.49) = Tariff Amt Paid ($8,974.49) ✅
+
+> **STATUS: HOLD**
+> - **Finding 1:** Vendor field is blank. Vendor identity is a required documentation field. Invoice cannot be verified as a complete, matching record without vendor identification — MUST constraint 1 (complete documentation required for PO match verification).
+
+---
+
+**Invoice ID: 106786 | PO: 42A5A709**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $253,680.00 × 10% = **$25,368.00** ✅
+- Total Payment: $253,680.00 + $25,368.00 = **$279,048.00** ✅
+- Refund Claimed ($25,368.00) = Tariff Amt Paid ($25,368.00) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106787 | PO: 4C4EDFFE**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $589,006.00 × 41% = **$241,492.46** ✅
+- Total Payment: $589,006.00 + $241,492.46 = **$830,498.46** ✅
+- Refund Claimed ($241,492.46) = Tariff Amt Paid ($241,492.46) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106788 | PO: 49B7852A**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $575,436.00 × 20% = **$115,087.20** ✅
+- Total Payment: $575,436.00 + $115,087.20 = **$690,523.20** ✅
+- Refund Claimed ($115,087.20) = Tariff Amt Paid ($115,087.20) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106789 | PO: 426772G8**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $297,696.00 × 30% = **$89,308.80** ✅
+- Total Payment: $297,696.00 + $89,308.80 = **$387,004.80** ✅
+- Refund Claimed ($89,308.80) = Tariff Amt Paid ($89,308.80) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106790 | PO: 43671P28**
+- PO: Present ✅
+- Vendor: Present ✅
+- Tariff Calculation: $158,382.00 × 20% = **$31,676.40** ✅
+- Total Payment: $158,382.00 + $31,676.40 = **$190,058.40** ✅
+- Refund Claimed ($31,676.40) = Tariff Amt Paid ($31,676.40) ✅
+- All fields complete ✅
+
+> **STATUS: CLEAR**
+
+---
+
+**Invoice ID: 106791 | PO: 47844C80**
+- PO: Present ✅
+- **Note:** PO 47844C80 also appears on Invoice 106773 (Vendor: LACNE) and Invoice 106792 (Vendor: ASET PLC). Three distinct invoices, three distinct vendors, sharing one PO number.
+- Vendor: Present ✅
+- Tariff Calculation: $197,046.00 × 41% = **$80,788.86** ✅
+- Total Payment: $197,046.00 + $80,788.86 = **$277,834.86** ✅
+- Refund Claimed ($80,788.86) = Tariff Amt Paid ($80,788.86) ✅
+
+> **STATUS: FLAG**
+> - **Finding 1:** PO 47844C80 appears on Invoice 106773 (Vendor: LACNE), Invoice 106791 (Vendor: CTX), and Invoice 106792 (Vendor: ASET PLC) — three distinct vendors, distinct items. Duplicate PO across non-identical records cannot be verified as matching distinct purchase orders — MUST constraint 1.
+
+---
+
+**Invoice ID: 106792 | PO: 47844C80**
+- PO: Present ✅
+- **Note:** PO 47844C80 also appears on Invoices 106773 and 106791. See above.
+- Vendor: Present ✅
+- Tariff Calculation: $82,000.00 × 41% = **$33,620.00** ✅
+- Total Payment: $82,000.00 + $33,620.00 = **$115,620.00** ✅
+- Refund Claimed ($33,620.00) =

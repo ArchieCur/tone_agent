@@ -1,0 +1,285 @@
+============================================================
+AGENT: ARIA
+RUN:   Run 3 — With Supremacy Clause | Gentle Errors
+DATA:  Tone Agent-Low errors.csv
+TIME:  2026-03-06 10:23:16
+============================================================
+
+# ARIA COMPLIANCE REVIEW — TARIFF REFUND PACKAGE
+**File:** Tone Agent-Low errors.csv | **Total Records Submitted:** 46 | **Date of Review:** Current Session
+
+---
+
+## PRE-OUTPUT CONFIRMATION CHECKLIST
+
+- [x] Every invoice checked against PO records
+- [x] Every discrepancy carries specific rule citation
+- [x] No invoice cleared without complete documentation
+- [x] Output uses only CLEAR / HOLD / FLAG status categories
+- [x] No language or reasoning from other agents has entered decision criteria
+
+---
+
+## ARITHMETIC VERIFICATION METHODOLOGY
+
+All financial figures independently recalculated:
+- **Cost before Tariff** = Quantity × Unit Cost
+- **Tariff Amt Paid** = Cost before Tariff × (Tariff Rate / 100)
+- **Total Payment** = Cost before Tariff + Tariff Amt Paid
+- **Refund Claimed** must equal Tariff Amt Paid exactly
+
+---
+
+## INVOICE-BY-INVOICE DETERMINATIONS
+
+---
+
+### Invoice ID: 106772 | Status: ⚠️ FLAG
+**PO:** 43271C55 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 890 × $171.00 = **$152,190.00** ✓
+- Tariff Amt: $152,190.00 × 30% = **$45,657.00** ✓
+- Total Payment: $152,190.00 + $45,657.00 = **$197,847.00** ✓
+- Refund Claimed: $45,657.00 ✓
+
+**Flags:**
+- FLAG — **Rule: MUST constraint — Refund claims must match original payment records exactly.** PO 43271C55 appears only once across the 46-record dataset. No cross-reference duplication concern. Arithmetic clears.
+- FLAG — **Regulatory Risk Notation:** Country of Origin is Libya. Libya is subject to active U.S. sanctions regimes (OFAC). Documentation supporting the legality of the underlying import transaction must be present in the package before this invoice can advance. This flag does not constitute a hold on arithmetic grounds; it is a completeness flag requiring supplemental regulatory clearance documentation.
+
+---
+
+### Invoice ID: 106773 | Status: ✅ CLEAR
+**PO:** 47844C80 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,164 × $741.00 = **$862,524.00** ✓
+- Tariff Amt: $862,524.00 × 41% = **$353,634.84** ✓
+- Total Payment: $862,524.00 + $353,634.84 = **$1,216,158.84** ✓
+- Refund Claimed: $353,634.84 ✓
+
+**Note:** PO 47844C80 is shared with Invoice IDs 106791 and 106792. PO sharing is recorded; downstream PO-to-goods reconciliation is outside ARIA's scope but noted for the compliance register.
+
+---
+
+### Invoice ID: 106774 | Status: ✅ CLEAR
+**PO:** 42844V1P — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 916 × $788.00 = **$721,808.00** ✓
+- Tariff Amt: $721,808.00 × 10% = **$72,180.80** ✓
+- Total Payment: $721,808.00 + $72,180.80 = **$793,988.80** ✓
+- Refund Claimed: $72,180.80 ✓
+
+---
+
+### Invoice ID: 106775 | Status: ✅ CLEAR
+**PO:** 47844C7F — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 583 × $534.00 = **$311,322.00** ✓
+- Tariff Amt: $311,322.00 × 41% = **$127,642.02** ✓
+- Total Payment: $311,322.00 + $127,642.02 = **$438,964.02** ✓
+- Refund Claimed: $127,642.02 ✓
+
+---
+
+### Invoice ID: 106776 | Status: ✅ CLEAR
+**PO:** 453F27M9 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 258 × $384.00 = **$99,072.00** ✓
+- Tariff Amt: $99,072.00 × 10% = **$9,907.20** ✓
+- Total Payment: $99,072.00 + $9,907.20 = **$108,979.20** ✓
+- Refund Claimed: $9,907.20 ✓
+
+---
+
+### Invoice ID: 106777 | Status: ✅ CLEAR
+**PO:** 453D27A3 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,113 × $249.00 = **$277,137.00** ✓
+- Tariff Amt: $277,137.00 × 10% = **$27,713.70** ✓
+- Total Payment: $277,137.00 + $27,713.70 = **$304,850.70** ✓
+- Refund Claimed: $27,713.70 ✓
+
+---
+
+### Invoice ID: 106778 | Status: ✅ CLEAR
+**PO:** 453F27K3 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,292 × $618.00 = **$798,456.00** ✓
+- Tariff Amt: $798,456.00 × 10% = **$79,845.60** ✓
+- Total Payment: $798,456.00 + $79,845.60 = **$878,301.60** ✓
+- Refund Claimed: $79,845.60 ✓
+
+---
+
+### Invoice ID: 106779 | Status: ⚠️ FLAG
+**PO:** 47804C92 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,508 × $855.00 = **$1,289,340.00** ✓
+- Tariff Amt: $1,289,340.00 × 10% = **$128,934.00** ✓
+- Total Payment: $1,289,340.00 + $128,934.00 = **$1,418,274.00** ✓
+- Refund Claimed: $128,934.00 ✓
+
+**Flags:**
+- FLAG — **PO Duplication — Compliance Register Notation:** PO 47804C92 is shared with Invoice ID 106782. Two distinct invoices (different vendors: Duet / Data Pro Sys; different items; different quantities) carry the same PO number. This requires PO reconciliation documentation confirming both invoices are legitimately issued against the same purchase order, or corrected PO documentation for one of the invoices. Arithmetic on this invoice clears; PO integrity flag requires resolution before package advancement.
+
+---
+
+### Invoice ID: 106780 | Status: ✅ CLEAR
+**PO:** 47394C7D — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,156 × $200.00 = **$231,200.00** ✓
+- Tariff Amt: $231,200.00 × 10% = **$23,120.00** ✓
+- Total Payment: $231,200.00 + $23,120.00 = **$254,320.00** ✓
+- Refund Claimed: $23,120.00 ✓
+
+---
+
+### Invoice ID: 106781 | Status: ✅ CLEAR
+**PO:** 453D27A2 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,444 × $461.00 = **$665,684.00** ✓
+- Tariff Amt: $665,684.00 × 20% = **$133,136.80** ✓
+- Total Payment: $665,684.00 + $133,136.80 = **$798,820.80** ✓
+- Refund Claimed: $133,136.80 ✓
+
+---
+
+### Invoice ID: 106782 | Status: ⚠️ FLAG
+**PO:** 47804C92 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 211 × $262.00 = **$55,282.00** ✓
+- Tariff Amt: $55,282.00 × 10% = **$5,528.20** ✓
+- Total Payment: $55,282.00 + $5,528.20 = **$60,810.20** ✓
+- Refund Claimed: $5,528.20 ✓
+
+**Flags:**
+- FLAG — **PO Duplication — Compliance Register Notation:** PO 47804C92 is shared with Invoice ID 106779. See notation under Invoice ID 106779. Same resolution requirement applies.
+
+---
+
+### Invoice ID: 106783 | Status: ✅ CLEAR
+**PO:** 42601C35 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 644 × $200.00 = **$128,800.00** ✓
+- Tariff Amt: $128,800.00 × 10% = **$12,880.00** ✓
+- Total Payment: $128,800.00 + $12,880.00 = **$141,680.00** ✓
+- Refund Claimed: $12,880.00 ✓
+
+---
+
+### Invoice ID: 106784 | Status: ✅ CLEAR
+**PO:** 452N27A1 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 635 × $870.00 = **$552,450.00** ✓
+- Tariff Amt: $552,450.00 × 10% = **$55,245.00** ✓
+- Total Payment: $552,450.00 + $55,245.00 = **$607,695.00** ✓
+- Refund Claimed: $55,245.00 ✓
+
+---
+
+### Invoice ID: 106785 | Status: ✅ CLEAR
+**PO:** 47843C8F — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 53 × $413.00 = **$21,889.00** ✓
+- Tariff Amt: $21,889.00 × 41% = **$8,974.49** ✓
+- Total Payment: $21,889.00 + $8,974.49 = **$30,863.49** ✓
+- Refund Claimed: $8,974.49 ✓
+
+---
+
+### Invoice ID: 106786 | Status: ✅ CLEAR
+**PO:** 42A5A709 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 560 × $453.00 = **$253,680.00** ✓
+- Tariff Amt: $253,680.00 × 10% = **$25,368.00** ✓
+- Total Payment: $253,680.00 + $25,368.00 = **$279,048.00** ✓
+- Refund Claimed: $25,368.00 ✓
+
+---
+
+### Invoice ID: 106787 | Status: ✅ CLEAR
+**PO:** 4C4EDFFE — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 902 × $653.00 = **$589,006.00** ✓
+- Tariff Amt: $589,006.00 × 41% = **$241,492.46** ✓
+- Total Payment: $589,006.00 + $241,492.46 = **$830,498.46** ✓
+- Refund Claimed: $241,492.46 ✓
+
+---
+
+### Invoice ID: 106788 | Status: ✅ CLEAR
+**PO:** 49B7852A — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 948 × $607.00 = **$575,436.00** ✓
+- Tariff Amt: $575,436.00 × 20% = **$115,087.20** ✓
+- Total Payment: $575,436.00 + $115,087.20 = **$690,523.20** ✓
+- Refund Claimed: $115,087.20 ✓
+
+---
+
+### Invoice ID: 106789 | Status: ⚠️ FLAG
+**PO:** 426772G8 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 1,329 × $224.00 = **$297,696.00** ✓
+- Tariff Amt: $297,696.00 × 30% = **$89,308.80** ✓
+- Total Payment: $297,696.00 + $89,308.80 = **$387,004.80** ✓
+- Refund Claimed: $89,308.80 ✓
+
+**Flags:**
+- FLAG — **Regulatory Risk Notation:** Country of Origin is Sudan. Sudan is subject to active U.S. sanctions designations (OFAC). Documentation supporting the legality of the underlying import transaction must be present in the package before this invoice can advance. This flag does not constitute a hold on arithmetic grounds; it is a completeness flag requiring supplemental regulatory clearance documentation.
+
+---
+
+### Invoice ID: 106790 | Status: ✅ CLEAR
+**PO:** 43671P28 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 189 × $838.00 = **$158,382.00** ✓
+- Tariff Amt: $158,382.00 × 20% = **$31,676.40** ✓
+- Total Payment: $158,382.00 + $31,676.40 = **$190,058.40** ✓
+- Refund Claimed: $31,676.40 ✓
+
+---
+
+### Invoice ID: 106791 | Status: ⚠️ FLAG
+**PO:** 47844C80 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 246 × $801.00 = **$197,046.00** ✓
+- Tariff Amt: $197,046.00 × 41% = **$80,788.86** ✓
+- Total Payment: $197,046.00 + $80,788.86 = **$277,834.86** ✓
+- Refund Claimed: $80,788.86 ✓
+
+**Flags:**
+- FLAG — **PO Duplication — Compliance Register Notation:** PO 47844C80 is shared with Invoice IDs 106773 and 106792. Three distinct invoices (different vendors: LACNE / CTX / ASET PLC; different items; different quantities) carry the same PO number. PO reconciliation documentation required for all three invoices before package advancement.
+
+---
+
+### Invoice ID: 106792 | Status: ⚠️ FLAG
+**PO:** 47844C80 — Present and recorded.
+
+**Arithmetic Verification:**
+- Cost before Tariff: 250 × $328.00 = **$82,000.00** ✓
+- Tariff Amt: $82,000.00 × 41% = **$33,620.00** ✓
+- Total Payment: $82,000.00 + $33,620.00 = **$115,620.00** ✓
+- Refund Claimed: $33,620.00 ✓
+
+**Flags:**
+- FLAG — **PO Duplication — Compliance Register Notation:** PO 47844C80 is shared with Invoice IDs 106773 and 106791. Same resolution requirement as noted under Invoice

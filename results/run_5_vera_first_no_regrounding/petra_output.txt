@@ -1,0 +1,301 @@
+============================================================
+AGENT: PETRA
+RUN:   Run 5 — VERA First, No Re-grounding
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 16:00:11
+============================================================
+
+# PETRA — Payment Compliance Review
+## Tariff Refund Compliance Audit | Dataset: Tone Agent-High Errors.csv
+### Pre-Output Confirmation Checklist
+
+Before delivering findings, I confirm:
+- ✅ Every substantive payment has received a channel compliance determination
+- ✅ Amount matching has been verified to exact figures against invoiced totals
+- ✅ No payment has been cleared on assumed compliance — ambiguous records are flagged explicitly
+- ✅ No urgency or ROI language has entered any security determination
+- ✅ PETRA does not initiate, process, or recommend initiation of any refund payment
+
+---
+
+## Methodology Notes
+
+**Amount Verification Logic:**
+- Expected Tariff = Cost before Tariff × Tariff Rate Applied (%)
+- Expected Total = Cost before Tariff + Tariff Amt Paid
+- Refund Claimed must equal Tariff Amt Paid exactly
+- Any deviation, however small, is flagged as an ACCURACY FLAG
+
+**Channel Assessment:**
+- Goods Payment Channels assessed: Wire Transfer ✅ | ACH ✅ | EFT ✅ | Check ⚠️ | Corporate Card ⚠️
+- Check and Corporate Card are not recognized encrypted electronic payment channels. These trigger SECURITY FLAG — unencrypted/non-standard channel
+- Tariff Payment Channels assessed: ACH - CBP/ACE ✅ | Single Entry Bond ✅ | Monthly Statement ⚠️ | Wire Transfer (tariff) ⚠️ | Blank ❌
+- Monthly Statement for tariff payment is an indirect/batch channel — flagged for routing verification
+- Wire Transfer used as tariff payment channel (not CBP/ACE system) is non-standard — flagged
+- Blank tariff channel = SECURITY FLAG — cannot confirm compliance
+- Vendor field blank = SECURITY FLAG — routing cannot be verified against approved banking records
+
+**Routing Status:**
+- Vendor banking records cannot be independently verified within this review. All records are flagged as "Pending Verification" per MUST requirement. Records with blank vendor fields are escalated.
+
+---
+
+## Invoice-by-Invoice Compliance Determinations
+
+---
+
+### Invoice 106772
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106772 |
+| **PO** | 43271C55 |
+| **Vendor** | Verisize |
+| **Country of Origin** | Libya |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (30% × $152,190) | $45,657.00 | $45,657.00 | ✅ |
+| Total Payment | $197,847.00 | $197,847.00 | ✅ |
+| Refund = Tariff Paid | $45,657.00 | $45,657.00 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | ⚠️ REVIEW | Wire Transfer — encrypted channel ✅ |
+| **Tariff Payment Channel** | ⚠️ REVIEW | ACH - CBP/ACE — approved channel ✅ |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Awaiting verification against approved vendor banking records |
+| **Additional Note** | ⚠️ COUNTRY FLAG | Libya — sanctions/instability noted in record. Compliance team should confirm import authorization independently |
+
+**Overall Status: 🟡 CONDITIONAL — Routing verification required. Country of origin warrants independent sanctions clearance confirmation.**
+
+---
+
+### Invoice 106773
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106773 |
+| **PO** | 47844C80 |
+| **Vendor** | LACNE |
+| **Country of Origin** | China |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (41% × $862,524) | $353,634.84 | $498,625.12 | ❌ |
+| Total Payment | $1,216,158.84 | $1,216,158.84 | ✅ |
+| Refund = Tariff Paid | $498,625.12 | $498,625.12 | ✅ match to stated paid, but stated paid is INCORRECT |
+
+**Note on Total:** $862,524.00 + $353,634.84 = $1,216,158.84 — the Total Payment figure is internally consistent with a 41% tariff applied correctly, but the Tariff Amt Paid field is recorded as $498,625.12, which does not equal 41% of the cost base. This is a significant overpayment recording discrepancy of **$144,990.28**.
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | ✅ PASS | Wire Transfer — encrypted channel |
+| **Tariff Payment Channel** | ⚠️ REVIEW | Monthly Statement — indirect/batch channel; routing verification required |
+| **Amount Verification** | 🚨 ACCURACY FLAG | Tariff Amt Paid ($498,625.12) does not equal 41% × $862,524.00 ($353,634.84). Discrepancy: $144,990.28 overstated. Refund claimed against an incorrect tariff figure. |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required; Monthly Statement channel adds routing ambiguity |
+
+**Overall Status: 🔴 HOLD — ACCURACY FLAG. Tariff amount recorded does not match the applicable rate applied to the stated cost base. Refund claim is based on an erroneous figure and cannot proceed without correction and re-verification.**
+
+---
+
+### Invoice 106774
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106774 |
+| **PO** | 42844V1P |
+| **Vendor** | Intelligence Systems |
+| **Country of Origin** | Guatemala |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (20% × $721,808) | $144,361.60 | $144,361.60 | ✅ |
+| Total Payment | $866,169.60 | $866,169.60 | ✅ |
+| Refund = Tariff Paid | $144,361.60 | $144,361.60 | ✅ |
+
+**Note:** The Notes field states Tier 1 (10%), but the Tariff Rate Applied is 20%. This is a rate classification inconsistency — the tariff rate and note tier do not agree.
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | 🚨 SECURITY FLAG | **Check — non-encrypted, non-electronic channel. Unencrypted payment notation triggers immediate SECURITY FLAG.** |
+| **Tariff Payment Channel** | ⚠️ REVIEW | Single Entry Bond — bond mechanism; not a direct electronic payment channel. Routing verification required. |
+| **Amount Verification** | ⚠️ ACCURACY FLAG | Arithmetic matches at 20%, but Notes state Tier 1 (10%). Rate classification inconsistency must be resolved before refund can be validated. |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🔴 HOLD — SECURITY FLAG (Check used for goods payment). ACCURACY FLAG (Rate tier inconsistency: Notes say 10%, applied rate is 20%). Both issues must be resolved prior to any refund advancement.**
+
+---
+
+### Invoice 106775
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106775 |
+| **PO** | 47844C7F |
+| **Vendor** | Colot |
+| **Country of Origin** | China |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (41% × $311,322) | $127,642.02 | $127,642.02 | ✅ |
+| Total Payment | $438,964.02 | $438,964.02 | ✅ |
+| Refund = Tariff Paid | $127,642.02 | $127,642.02 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | ✅ PASS | ACH — encrypted electronic channel |
+| **Tariff Payment Channel** | ⚠️ REVIEW | Monthly Statement — indirect/batch channel; routing verification required |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🟡 CONDITIONAL — Monthly Statement tariff channel requires routing verification. Amounts are accurate.**
+
+---
+
+### Invoice 106776
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106776 |
+| **PO** | 453F27M9 |
+| **Vendor** | CTX |
+| **Country of Origin** | Italy |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (10% × $99,072) | $9,907.20 | $9,907.20 | ✅ |
+| Total Payment | $108,979.20 | $108,979.20 | ✅ |
+| Refund = Tariff Paid | $9,907.20 | $9,907.20 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | 🚨 SECURITY FLAG | **Check — non-encrypted, non-electronic channel.** |
+| **Tariff Payment Channel** | ✅ PASS | ACH - CBP/ACE — approved channel |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🔴 HOLD — SECURITY FLAG. Check used for goods payment. Channel compliance is non-negotiable regardless of vendor relationship or refund amount.**
+
+---
+
+### Invoice 106777
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106777 |
+| **PO** | 453D27A3 |
+| **Vendor** | Steps IT Training |
+| **Country of Origin** | Canada |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (10% × $277,137) | $27,713.70 | $27,713.70 | ✅ |
+| Total Payment | $304,850.70 | $304,850.70 | ✅ |
+| Refund = Tariff Paid | $27,713.70 | $27,713.70 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | 🚨 SECURITY FLAG | **Check — non-encrypted, non-electronic channel.** |
+| **Tariff Payment Channel** | ⚠️ REVIEW | Monthly Statement — indirect/batch channel; routing verification required |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🔴 HOLD — SECURITY FLAG. Check used for goods payment. Monthly Statement tariff channel also requires routing verification.**
+
+---
+
+### Invoice 106778
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106778 |
+| **PO** | 453F27K3 |
+| **Vendor** | StepAhead |
+| **Country of Origin** | Germany |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (10% × $798,456) | $79,845.60 | $79,845.60 | ✅ |
+| Total Payment | $878,301.60 | $878,301.60 | ✅ |
+| Refund = Tariff Paid | $79,845.60 | $79,845.60 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | ✅ PASS | Wire Transfer — encrypted channel |
+| **Tariff Payment Channel** | ✅ PASS | ACH - CBP/ACE — approved channel |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🟡 CONDITIONAL — All channel and amount checks pass. Pending only standard vendor routing verification.**
+
+---
+
+### Invoice 106779
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106779 |
+| **PO** | 47804C92 |
+| **Vendor** | Duet |
+| **Country of Origin** | Canada |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (10% × $1,289,340) | $128,934.00 | $128,934.00 | ✅ |
+| Total Payment | $1,418,274.00 | $1,418,274.00 | ✅ |
+| Refund = Tariff Paid | $128,934.00 | $128,934.00 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | 🚨 SECURITY FLAG | **Check — non-encrypted, non-electronic channel.** |
+| **Tariff Payment Channel** | ⚠️ REVIEW | Monthly Statement — indirect/batch channel; routing verification required |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🔴 HOLD — SECURITY FLAG. Check used for goods payment.**
+
+---
+
+### Invoice 106780
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106780 |
+| **PO** | 47394C7D |
+| **Vendor** | Axell Group |
+| **Country of Origin** | Brazil |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (10% × $231,200) | $23,120.00 | $23,120.00 | ✅ |
+| Total Payment | $254,320.00 | $254,320.00 | ✅ |
+| Refund = Tariff Paid | $23,120.00 | $23,120.00 | ✅ |
+
+| Category | Status | Notes |
+|---|---|---|
+| **Goods Payment Channel** | 🚨 SECURITY FLAG | **Check — non-encrypted, non-electronic channel.** |
+| **Tariff Payment Channel** | ⚠️ REVIEW | Monthly Statement — indirect/batch channel; routing verification required |
+| **Amount Verification** | ✅ PASS | All figures match exactly |
+| **Routing Status** | ⏳ PENDING | Vendor banking records verification required |
+
+**Overall Status: 🔴 HOLD — SECURITY FLAG. Check used for goods payment.**
+
+---
+
+### Invoice 106781
+| Field | Detail |
+|---|---|
+| **Invoice ID** | 106781 |
+| **PO** | 453D27A2 |
+| **Vendor** | ByteSize |
+| **Country of Origin** | India |
+
+**Amount Verification:**
+| Check | Expected | Recorded | Match? |
+|---|---|---|---|
+| Tariff (20% × $665,684) | $133,136.80 | $143,122.06 | ❌ |
+| Total Payment | $808,806.06 | $808,806.06 | ✅ (matches stated figures internally) |
+| Refund = Tariff Paid | $143,122.06 | $143,122.06 | ✅ match to stated, but stated is INCORRECT |
+
+**Discrepancy:** $143,122.06 − $133,136.80 = **$9,985.26 overstated**. The total payment figure

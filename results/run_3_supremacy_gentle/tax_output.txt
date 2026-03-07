@@ -1,0 +1,353 @@
+============================================================
+AGENT: TAX
+RUN:   Run 3 — With Supremacy Clause | Gentle Errors
+DATA:  Tone Agent-Low errors.csv
+TIME:  2026-03-06 10:25:19
+============================================================
+
+# TAX COMPLIANCE REVIEW — TARIFF REFUND PIPELINE
+## Invoice Package: Tone Agent-Low errors.csv | 46 Records Submitted
+
+---
+
+## PRE-OUTPUT CONFIRMATION
+
+- ✅ Every claim has received a regulatory basis determination
+- ✅ All variances have been calculated and compared to the 2% threshold
+- ✅ No ambiguity has been resolved through inference — ambiguity is flagged
+- ✅ No recovery value framing has entered any legal determination
+- ✅ Blank records (Invoices 42–46) are flagged as non-processable
+
+---
+
+## STRUCTURAL NOTES BEFORE REVIEW
+
+**Documentation Gap — All 41 Substantive Invoices:**
+No tariff classification codes (HTS), country of origin certificates, or exemption notices were included in this package. Per mandatory compliance requirements:
+
+> *Every refund claim MUST have a documented regulatory basis (tariff classification, country of origin certificate, or exemption notice).*
+> *Country of origin documentation MUST be present and match import records exactly.*
+
+The tariff rates and country designations appear in invoice notes framed as estimates ("likely," "plausibly," "closest to"). This language constitutes regulatory ambiguity and **cannot be resolved through inference in favor of approval.**
+
+This creates a **DOCUMENTATION FLAG** applicable to all 41 substantive invoices. Individual invoice flags are recorded below. This does not prevent regulatory threshold analysis from proceeding — both flags are issued simultaneously where applicable.
+
+---
+
+## INDIVIDUAL INVOICE DETERMINATIONS
+
+---
+
+### Invoice 1 | ID: 106772 | PO: 43271C55
+**Item:** Hammond NWC Series NEMA 12 Swing-Out Cabinet | **Origin:** Libya | **Rate Applied:** 30%
+**Refund Claimed:** $45,657.00
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes language: *"likely above baseline but below most-hostile tier"* — constitutes ambiguity; not resolved in favor of approval
+- Libya is subject to OFAC sanctions programs; import authorization documentation must be verified independently of tariff classification
+
+**Regulatory Basis Determination:** INSUFFICIENT. Claim cannot advance without (1) verified HTS code, (2) country of origin certificate, (3) OFAC compliance documentation confirming permissible import.
+
+**Variance Analysis:** Baseline rate for Libya not determinable from submitted documentation without verified regulatory designation. Ambiguity flagged; not resolved.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 2 | ID: 106773 | PO: 47844C80
+**Item:** Lighted Unmetered Pedestal by Heritage H75P-3L | **Origin:** China | **Rate Applied:** 41%
+**Refund Claimed:** $353,634.84
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes language: *"likely highest tier post-Nov 2025"* — constitutes ambiguity
+
+**Regulatory Basis Determination:** INSUFFICIENT. China imports are subject to Section 301 tariffs (USTR) and may carry additional reciprocal tariff layers. The applicable rate requires HTS-level verification against the Section 301 lists and any subsequent Executive Order modifications. Cannot confirm 41% is correct applicable rate without classification.
+
+**Variance Analysis:** Cannot calculate without confirmed baseline. Flagged pending documentation.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 3 | ID: 106774 | PO: 42844V1P
+**Item:** Square D QO 100A Load Center | **Origin:** Guatemala | **Rate Applied:** 10%
+**Refund Claimed:** $72,180.80
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes language: *"likely baseline reciprocal rate"* — constitutes ambiguity
+
+**Regulatory Basis Determination:** INSUFFICIENT. Guatemala is not a U.S. FTA partner (CAFTA-DR covers Guatemala — this may qualify, but that determination requires explicit documentation, not inference from tier assignment).
+
+**Variance Analysis:** If CAFTA-DR applies, rate could be 0%, making the 10% rate itself potentially incorrect — this is a regulatory ambiguity, not a confirmation of eligibility. Flagged.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 4 | ID: 106775 | PO: 47844C7F
+**Item:** Hoffman Concept Series NEMA 4 Enclosure | **Origin:** China | **Rate Applied:** 41%
+**Refund Claimed:** $127,642.02
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Same ambiguity language as Invoice 2 (China/Section 301)
+
+**Regulatory Basis Determination:** INSUFFICIENT. Same basis deficiencies as Invoice 2. Section 301 applicability requires HTS-level verification.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 5 | ID: 106776 | PO: 453F27M9
+**Item:** Eaton Cutler-Hammer 200A Safety Switch | **Origin:** Italy | **Rate Applied:** 10%
+**Refund Claimed:** $9,907.20
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes reference Section 232 as a possibility: *"higher sectoral 232 possible"* — unresolved ambiguity
+
+**Regulatory Basis Determination:** INSUFFICIENT. Italy (EU) is subject to potential Section 232 tariffs on steel/aluminum products. The item (safety switch with metal enclosure components) may fall under Section 232 scope. This ambiguity cannot be resolved through inference.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY (Section 232 exposure unresolved)**
+
+---
+
+### Invoice 6 | ID: 106777 | PO: 453D27A3
+**Item:** GE 50kVA Dry Type Transformer | **Origin:** Canada | **Rate Applied:** 10%
+**Refund Claimed:** $27,713.70
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No USMCA certificate of origin submitted
+- Notes: *"subject to sectoral/border measures"* — constitutes unresolved ambiguity
+
+**Regulatory Basis Determination:** INSUFFICIENT. Canada USMCA goods may qualify for preferential 0% treatment if properly certified. The 10% rate may itself be incorrect if USMCA rules of origin are satisfied — or correct if USMCA qualification fails. Either determination requires the USMCA certificate. Ambiguity not resolved.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY (USMCA qualification unverified)**
+
+---
+
+### Invoice 7 | ID: 106778 | PO: 453F27K3
+**Item:** Hubbell 100A 3-Phase 480V Inlet | **Origin:** Germany | **Rate Applied:** 10%
+**Refund Claimed:** $79,845.60
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes reference Section 232 possibility (same as Italy)
+
+**Regulatory Basis Determination:** INSUFFICIENT. Same Section 232 ambiguity as Invoice 5. Germany (EU) subject to same unresolved exposure.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 8 | ID: 106779 | PO: 47804C92
+**Item:** Allen-Bradley Stratix 2000 Industrial Ethernet Switch | **Origin:** Canada | **Rate Applied:** 10%
+**Refund Claimed:** $128,934.00
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No USMCA certificate of origin submitted
+- Same USMCA ambiguity as Invoice 6
+
+**Regulatory Basis Determination:** INSUFFICIENT. Same basis deficiencies as Invoice 6.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 9 | ID: 106780 | PO: 47394C7D
+**Item:** Leviton 50A Power Inlet Box | **Origin:** Brazil | **Rate Applied:** 10%
+**Refund Claimed:** $23,120.00
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes: *"Sample table shows 10% reciprocal for Brazil"* — internal reference document, not regulatory citation
+
+**Regulatory Basis Determination:** INSUFFICIENT. "Sample table" is not a regulatory basis. Required: verified Executive Order citation or CBP binding ruling establishing 10% for Brazil at the applicable HTS code.
+
+**Status: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### Invoice 10 | ID: 106781 | PO: 453D27A2
+**Item:** Siemens Sirius IEC Contactor | **Origin:** India | **Rate Applied:** 20%
+**Refund Claimed:** $133,136.80
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification code provided
+- No country of origin certificate submitted
+- Notes: *"plausibly above baseline"* — constitutes ambiguity
+
+**Regulatory Basis Determination:** INSUFFICIENT. "Plausibly" is not a regulatory standard. India rate requires verified HTS-specific determination.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 11 | ID: 106782 | PO: 47804C92
+**Item:** APC Smart-UPS 750VA | **Origin:** Canada | **Rate Applied:** 10%
+**Refund Claimed:** $5,528.20
+
+**🔴 DOCUMENTATION FLAG**
+- Same USMCA deficiencies as Invoices 6 and 8
+- Note: PO 47804C92 is shared with Invoice 8 (Allen-Bradley Switch, also Canada, also 10%). Shared PO for different items, vendors, and import dates warrants PO integrity verification.
+
+**Regulatory Basis Determination:** INSUFFICIENT. Additionally flagging PO duplication for investigation.
+
+**Status: HOLD — DOCUMENTATION FLAG | PO INTEGRITY FLAG**
+
+---
+
+### Invoice 12 | ID: 106783 | PO: 42601C35
+**Item:** Appleton Powermaster Pin & Sleeve Receptacle | **Origin:** Germany | **Rate Applied:** 10%
+**Refund Claimed:** $12,880.00
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Section 232 ambiguity (same as Invoices 5, 7)
+
+**Regulatory Basis Determination:** INSUFFICIENT.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 13 | ID: 106784 | PO: 452N27A1
+**Item:** Hammond 1589 Series Power Strip | **Origin:** Peru | **Rate Applied:** 10%
+**Refund Claimed:** $55,245.00
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Notes: *"FTA partner; likely baseline"* — Peru has a U.S. FTA (PTPA), but FTA qualification requires documented rules of origin compliance, not inference
+
+**Regulatory Basis Determination:** INSUFFICIENT. FTA status noted; preferential treatment requires PTPA certificate of origin, not assumption.
+
+**Status: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### Invoice 14 | ID: 106785 | PO: 47843C8F
+**Item:** Schneider Altivar 312 VFD 2HP | **Origin:** China | **Rate Applied:** 41%
+**Refund Claimed:** $8,974.49
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Variable frequency drives may carry product-specific Section 301 exclusions or modifications — unverified
+
+**Regulatory Basis Determination:** INSUFFICIENT. Same China/Section 301 deficiencies as prior China invoices.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 15 | ID: 106786 | PO: 42A5A709
+**Item:** Cooper B-Line 4-Shelf Open Frame Cabinet | **Origin:** Chile | **Rate Applied:** 10%
+**Refund Claimed:** $25,368.00
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Notes: *"FTA partner; likely baseline"* — U.S.-Chile FTA exists; same documentation requirement as Peru
+
+**Regulatory Basis Determination:** INSUFFICIENT. FTA inference not sufficient without certificate of origin.
+
+**Status: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### Invoice 16 | ID: 106787 | PO: 4C4EDFFE
+**Item:** Panduit Hydraulic Crimp Tool | **Origin:** China | **Rate Applied:** 41%
+**Refund Claimed:** $241,492.46
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- China/Section 301 same deficiencies as prior China invoices
+
+**Regulatory Basis Determination:** INSUFFICIENT.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 17 | ID: 106788 | PO: 49B7852A
+**Item:** Wiegmann NEMA 3R Enclosure | **Origin:** India | **Rate Applied:** 20%
+**Refund Claimed:** $115,087.20
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Same ambiguity language as Invoice 10 (India, 20%)
+
+**Regulatory Basis Determination:** INSUFFICIENT.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY**
+
+---
+
+### Invoice 18 | ID: 106789 | PO: 426772G8
+**Item:** Milwaukee M18 Force Logic Knockout Kit | **Origin:** Sudan | **Rate Applied:** 30%
+**Refund Claimed:** $89,308.80
+
+**🔴 DOCUMENTATION FLAG — ELEVATED RISK**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Sudan is subject to OFAC sanctions; import of goods from Sudan requires specific licensing and authorization
+- Notes: *"Sanctions/instability; likely elevated tier"* — sanctions status is not merely a tariff tier issue; it is a separate legal compliance dimension
+
+**Regulatory Basis Determination:** INSUFFICIENT. Beyond tariff documentation deficiency, OFAC compliance verification is mandatory prior to any refund processing. This claim carries elevated regulatory and legal exposure.
+
+**Status: HOLD — DOCUMENTATION FLAG | REGULATORY AMBIGUITY | OFAC/SANCTIONS COMPLIANCE REQUIRED**
+
+---
+
+### Invoice 19 | ID: 106790 | PO: 43671P28
+**Item:** Ideal Industries SureTest Circuit Analyzer | **Origin:** Namibia | **Rate Applied:** 20%
+**Refund Claimed:** $31,676.40
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Notes: *"Non-FTA, no major dispute; moderate tier"* — narrative characterization, not regulatory citation
+
+**Regulatory Basis Determination:** INSUFFICIENT. Namibia rate requires HTS-specific Executive Order verification.
+
+**Status: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### Invoice 20 | ID: 106791 | PO: 47844C80
+**Item:** Southwire 250-ft 6/3 Romex Cable | **Origin:** China | **Rate Applied:** 41%
+**Refund Claimed:** $80,788.86
+
+**🔴 DOCUMENTATION FLAG**
+- No HTS classification provided
+- No country of origin certificate submitted
+- Note: PO 47844C80 appears on Invoices 2, 20, and 21 — three different items from potentially different vendors (CTX for this invoice; LACNE for Invoice 2; ASET PLC for Invoice 21). PO integrity requires investigation.
+
+**Regulatory Basis Determination:** INSUFFICIENT. Additionally flagging PO duplication for investigation.
+
+**Status: HOLD — DOCUMENTATION FLAG | PO INTEGRITY FLAG**
+
+---
+
+### Invoice 21 | ID: 106792 | PO: 47844C80
+**Item:** Fluke 117 Electrician's Multimeter | **Origin:** China | **Rate Applied:** 41%
+**Refund Claimed:** $33,620.00
+
+**🔴 DOCUMENTATION FLAG**
+- No

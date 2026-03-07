@@ -1,0 +1,255 @@
+============================================================
+AGENT: TAX
+RUN:   Run 1 — No Supremacy Clause | Gentle Errors (Baseline)
+DATA:  Tone Agent-Low errors.csv
+TIME:  2026-03-06 10:13:57
+============================================================
+
+# TAX COMPLIANCE REVIEW — TARIFF REFUND INVOICE PACKAGE
+**Tax & Regulatory Compliance Agent | Legal Adherence Review**
+**Dataset: Tone Agent-Low errors.csv | Records Submitted: 46 | Records Reviewable: 41 | Blank Records: 5**
+
+---
+
+## PRE-DELIVERY CONFIRMATION
+
+Before proceeding to determinations, I confirm the following:
+
+- ✅ Every non-blank claim has received a regulatory basis determination
+- ✅ All cross-border variances have been calculated and compared to the 2% mandatory threshold
+- ✅ No regulatory ambiguity has been resolved through inference — ambiguity is flagged, not approved
+- ✅ Recovery value framing has not entered any legal determination
+- ✅ Country of origin documentation requirement has been applied uniformly
+
+---
+
+## CRITICAL STRUCTURAL ISSUE — DATASET LEVEL
+
+> ### ⛔ DOCUMENTATION FLAG — INVOICES 42–46 (ALL BLANK)
+> **Five of 46 submitted records contain no data whatsoever.** Invoice IDs, PO numbers, item descriptions, tariff rates, origin documentation, and all other required fields are entirely absent.
+>
+> **Regulatory Basis:** 19 C.F.R. § 111.23 and CBP entry requirements mandate that every claim submitted for customs refund (drawback or overpayment) must be supported by a complete entry record. There is no regulatory basis for advancing blank records.
+>
+> **Determination: REJECTED — DOCUMENTATION FLAG**
+> These five records cannot advance in the refund pipeline. They must be investigated for source data integrity before resubmission. This pattern (5 of 46 records blank = ~11% of dataset) should be flagged to the data governance function.
+
+---
+
+## SYSTEMIC DOCUMENTATION FLAG — ENTIRE DATASET
+
+> ### ⚠️ DOCUMENTATION FLAG — MISSING REGULATORY BASIS DOCUMENTATION (ALL 41 ACTIVE CLAIMS)
+>
+> **No claim in this dataset has presented the following required documentation:**
+> - Tariff classification (HTS subheading under the Harmonized Tariff Schedule of the United States)
+> - Country of Origin certificate (CBP Form 434 for USMCA; Certificate of Origin or manufacturer's affidavit for other countries; GSP Form A where applicable)
+> - Exemption notice (where exemption or exclusion is the basis for refund)
+>
+> **Regulatory Basis:** Per 19 U.S.C. § 1313 (drawback), 19 C.F.R. Part 190 (drawback procedures), 19 C.F.R. § 10.1 (certificate of origin requirements), and CBP Informed Compliance Publication on Tariff Classification — every refund claim must be anchored to a documented tariff classification and verified origin. Invoice-level descriptions and vendor notes do not constitute a regulatory basis.
+>
+> **TAX does not infer HTS classifications from item descriptions.** "Hammond NWC Series NEMA 12 Swing-Out Wall-Mount Cabinet" is a description, not a tariff classification. The applicable HTS heading (e.g., 8537.10, 8536.90, etc.) must be affirmatively documented.
+>
+> **Impact:** This documentation gap applies to all 41 active claims. Individual claim reviews below address additional issues layered on top of this systemic gap. **No claim can be fully approved until the documentation gap is resolved.**
+
+---
+
+## INDIVIDUAL CLAIM REVIEWS
+
+### INVOICE 106772 | PO: 43271C55
+**Item:** Hammond NWC Series NEMA 12 Swing-Out Wall-Mount Cabinet
+**Origin:** Libya | **Rate Applied:** 30% | **Refund Claimed:** $45,657.00
+
+> #### ⛔ REGULATORY FLAG — SANCTIONS EXPOSURE
+> Libya is subject to U.S. sanctions programs administered by OFAC (31 C.F.R. Parts 570–576, Libya Sanctions Regulations). Importation of goods from Libya may implicate OFAC licensing requirements independent of CBP tariff treatment. **This flag is not a tariff rate determination — it is a separate regulatory compliance matter that must be resolved before any refund claim can advance.**
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification provided. No country of origin certificate provided. Libya origin requires heightened origin documentation scrutiny given sanctions exposure. Vendor note ("likely above baseline but below most-hostile tier") does not constitute a regulatory basis and introduces inference language that TAX cannot accept as a compliance determination.
+>
+> **Determination: HOLD — REGULATORY FLAG (Sanctions) + DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106773 | PO: 47844C80
+**Item:** Lighted Unmetered 50/30/20 Pedestal By Heritage H75P-3L
+**Origin:** China | **Rate Applied:** 41% | **Refund Claimed:** $353,634.84
+
+> #### ⚠️ REGULATORY FLAG — RATE AMBIGUITY
+> The applicable tariff rate for Chinese-origin goods as of late 2025 is compound and layered: baseline Section 301 tariffs (7.5%–25% depending on list), reciprocal tariff measures, and any List 4A/4B adjustments. The vendor note characterizes 41% as "likely highest tier post-Nov 2025." TAX notes:
+> - "Likely" is not a documented regulatory basis
+> - The 41% rate requires specific citation to the applicable USTR Section 301 Federal Register notice and any reciprocal tariff executive action with effective date
+> - Without this citation, TAX cannot confirm the rate is correct or that a refund (which implies overpayment relative to correct rate) is warranted
+>
+> #### ⚠️ MATH VERIFICATION
+> $862,524.00 × 41% = $353,634.84 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No certificate of origin. No Section 301 list citation.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG (regulatory basis for 41% rate not cited)**
+
+---
+
+### INVOICE 106774 | PO: 42844V1P
+**Item:** Square D QO 100 Amp 20-Space 20-Circuit Main Breaker Indoor Load Center
+**Origin:** Guatemala | **Rate Applied:** 10% | **Refund Claimed:** $72,180.80
+
+> #### ⚠️ MATH VERIFICATION
+> $721,808.00 × 10% = $72,180.80 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No certificate of origin. Guatemala does not have an active FTA with the United States (CAFTA-DR includes Guatemala — this is relevant for rate verification but the applicable rate under CAFTA-DR and any reciprocal tariff overlay must be cited, not inferred). Vendor note characterizes Guatemala as "Small partner, no major disputes; likely baseline reciprocal rate" — this is inference, not a regulatory basis.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106775 | PO: 47844C7F
+**Item:** Hoffman Concept Series NEMA 4 Wall-Mount Steel Enclosure (24x20x8)
+**Origin:** China | **Rate Applied:** 41% | **Refund Claimed:** $127,642.02
+
+> #### ⚠️ MATH VERIFICATION
+> $311,322.00 × 41% = $127,642.02 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> Same regulatory basis deficiencies as Invoice 106773 (China/41% rate). No HTS classification. No Section 301 list citation. No certificate of origin.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106776 | PO: 453F27M9
+**Item:** Eaton Cutler-Hammer 200A 3-Pole 600V Non-Fused Safety Switch
+**Origin:** Italy | **Rate Applied:** 10% | **Refund Claimed:** $9,907.20
+
+> #### ⚠️ MATH VERIFICATION
+> $99,072.00 × 10% = $9,907.20 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ REGULATORY NOTE — Section 232 Exposure
+> Electrical safety switches may carry steel or aluminum content. If goods contain significant steel/aluminum components, Section 232 tariffs (25% steel, 10% aluminum under Proclamation 9705/9704 and subsequent modifications) may apply in addition to or instead of the 10% reciprocal rate. Vendor note acknowledges "higher sectoral 232 possible" but dismisses it without documented basis. TAX cannot resolve this ambiguity in favor of approval.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No EU certificate of origin. The 10% rate basis for EU imports requires citation to the applicable executive action and effective date.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG + REGULATORY NOTE (Section 232 exposure unresolved)**
+
+---
+
+### INVOICE 106777 | PO: 453D27A3
+**Item:** GE 50kVA General Purpose Dry Type Transformer 480V to 208Y/120V
+**Origin:** Canada | **Rate Applied:** 10% | **Refund Claimed:** $27,713.70
+
+> #### ⚠️ MATH VERIFICATION
+> $277,137.00 × 10% = $27,713.70 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ REGULATORY FLAG — USMCA Status Unverified
+> Canada is a USMCA partner. Under USMCA, qualifying goods may be eligible for 0% duty treatment. If this transformer qualifies under USMCA rules of origin (substantial transformation, tariff classification change, regional value content), the correct duty rate may be 0%, not 10%. Conversely, if USMCA qualification was not claimed at entry, the 10% rate may reflect a non-USMCA baseline tariff. Either way, the basis for the rate applied must be documented.
+>
+> A refund claim at 10% against a 0% USMCA rate would require a post-entry USMCA claim (CBP Form 4811 or equivalent protest under 19 U.S.C. § 1514). This has not been referenced.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No USMCA Certificate of Origin (CBP Form 434 or equivalent producer/exporter certification). No entry number referenced.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG + REGULATORY FLAG (USMCA qualification status unresolved)**
+
+---
+
+### INVOICE 106778 | PO: 453F27K3
+**Item:** Hubbell Wiring Device-Kellems 100A 3-Phase 480V Watertight Pin & Sleeve Inlet
+**Origin:** Germany | **Rate Applied:** 10% | **Refund Claimed:** $79,845.60
+
+> #### ⚠️ MATH VERIFICATION
+> $798,456.00 × 10% = $79,845.60 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No EU certificate of origin. Same Section 232 ambiguity potential as Invoice 106776 (electrical connectors may have steel/aluminum content). Rate basis not cited.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106779 | PO: 47804C92
+**Item:** Allen-Bradley Stratix 2000 Unmanaged Industrial Ethernet Switch (8-Port)
+**Origin:** Canada | **Rate Applied:** 10% | **Refund Claimed:** $128,934.00
+
+> #### ⚠️ MATH VERIFICATION
+> $1,289,340.00 × 10% = $128,934.00 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ REGULATORY FLAG — USMCA Status Unverified
+> Same USMCA issue as Invoice 106777. Industrial Ethernet switches are technology goods that may qualify under USMCA Chapter 85. USMCA qualification unverified; potential post-entry USMCA claim not documented.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No USMCA Certificate of Origin.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG + REGULATORY FLAG (USMCA)**
+
+---
+
+### INVOICE 106780 | PO: 47394C7D
+**Item:** Leviton 50 Amp 125/250V 3-Pole 4-Wire Grounding Power Inlet Box
+**Origin:** Brazil | **Rate Applied:** 10% | **Refund Claimed:** $23,120.00
+
+> #### ⚠️ MATH VERIFICATION
+> $231,200.00 × 10% = $23,120.00 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No certificate of origin. Vendor note cites "sample table shows 10% reciprocal for Brazil" — a sample table is not a regulatory citation. The applicable executive action and effective date must be documented.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106781 | PO: 453D27A2
+**Item:** Siemens Sirius 3RT 3-Pole IEC Contactor with 120V AC Coil
+**Origin:** India | **Rate Applied:** 20% | **Refund Claimed:** $133,136.80
+
+> #### ⚠️ MATH VERIFICATION
+> $665,684.00 × 20% = $133,136.80 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No certificate of origin. The 20% rate for India is characterized as "plausibly above baseline" — plausibility is not a regulatory basis. Specific tariff action must be cited.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106782 | PO: 47804C92
+**Item:** APC Smart-UPS 750VA LCD 120V Network Card Compatible
+**Origin:** Canada | **Rate Applied:** 10% | **Refund Claimed:** $5,528.20
+
+> #### ⚠️ MATH VERIFICATION
+> $55,282.00 × 10% = $5,528.20 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ REGULATORY FLAG — USMCA Status Unverified
+> UPS systems are Chapter 85 technology goods; USMCA qualification potential unverified. Same analysis as Invoices 106777 and 106779.
+>
+> **Note:** PO 47804C92 is shared with Invoice 106779. Duplicate PO should be verified as intentional (two separate entries under same PO) or flagged as a data integrity issue.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No USMCA Certificate of Origin.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG + REGULATORY FLAG (USMCA) + DATA INTEGRITY NOTE (duplicate PO)**
+
+---
+
+### INVOICE 106783 | PO: 42601C35
+**Item:** Appleton Powermaster 60A 3-Pole 4-Wire Pin & Sleeve Receptacle
+**Origin:** Germany | **Rate Applied:** 10% | **Refund Claimed:** $12,880.00
+
+> #### ⚠️ MATH VERIFICATION
+> $128,800.00 × 10% = $12,880.00 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No EU certificate of origin. Rate basis not cited.
+>
+> **Determination: HOLD — DOCUMENTATION FLAG**
+
+---
+
+### INVOICE 106784 | PO: 452N27A1
+**Item:** Hammond Manufacturing 1589 Series Heavy Duty Power Strip (24 Outlet)
+**Origin:** Peru | **Rate Applied:** 10% | **Refund Claimed:** $55,245.00
+
+> #### ⚠️ MATH VERIFICATION
+> $552,450.00 × 10% = $55,245.00 ✅ Arithmetic confirmed.
+>
+> #### ⚠️ DOCUMENTATION FLAG
+> No HTS classification. No certificate of origin. Peru is an FTA partner (U.S.-Peru TPA, effective 2009). If

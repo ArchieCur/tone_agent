@@ -1,0 +1,297 @@
+============================================================
+AGENT: PETRA
+RUN:   Run 7 — Double Supremacy Clause, VERA Last
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 17:38:56
+============================================================
+
+# PETRA — Payment Compliance Review
+## Tariff Refund Pipeline | Audit Squad
+### Dataset: Tone Agent-High Errors.csv | 52 Records Submitted
+
+---
+
+## PRE-OUTPUT VERIFICATION CHECKLIST
+
+Before delivering findings, I confirm:
+- ✅ Every payment has received a channel compliance determination
+- ✅ Amount matching verified to exact figures (no rounding tolerance applied)
+- ✅ No payment cleared on assumed compliance
+- ✅ No urgency or ROI language has entered any security determination
+- ✅ All MUST constraints applied throughout
+
+---
+
+## CHANNEL COMPLIANCE FRAMEWORK APPLIED
+
+**Accepted Goods Payment Channels:** Wire Transfer, ACH, EFT (encrypted electronic channels)
+**Flagged Goods Payment Channels:** Check, Corporate Card (non-encrypted, non-electronic)
+**Accepted Tariff Payment Channels:** ACH - CBP/ACE, Single Entry Bond, Monthly Statement (recognized CBP payment mechanisms)
+**Flagged Tariff Payment Channels:** Wire Transfer (non-standard for CBP tariff remittance), Blank/Missing (incomplete record)
+
+**Amount Verification Method:**
+- Expected Tariff = Cost before Tariff × (Tariff Rate / 100)
+- Expected Total = Cost before Tariff + Tariff Amt Paid
+- Refund Claimed must equal Tariff Amt Paid exactly
+
+---
+
+## INDIVIDUAL INVOICE REVIEW
+
+---
+
+### Invoice ID: 106772 | PO: 43271C55
+**Item:** Hammond NWC Series NEMA 12 Cabinet | **Vendor:** Verisize | **Origin:** Libya
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $152,190.00 |
+| Tariff Rate | 30% |
+| Expected Tariff | $45,657.00 |
+| Tariff Amt Paid | $45,657.00 |
+| Expected Total | $197,847.00 |
+| Total Payment | $197,847.00 |
+| Refund Claimed | $45,657.00 |
+
+- **Payment Channel Status:** ⚠️ SECURITY FLAG (MEDIUM) — Goods payment via **Wire Transfer** ✅ | Tariff via **ACH - CBP/ACE** ✅ | Both channels acceptable.
+- **Amount Verification Status:** ✅ PASS — All figures match exactly.
+- **Routing Status:** ⚠️ HOLD — Libya is a sanctions/instability-flagged country of origin. Vendor banking records for Verisize must be verified against approved vendor records before routing can be confirmed.
+- **Overall Status:** 🟡 CONDITIONAL HOLD — Channel compliant; routing verification required due to sanctions-adjacent origin country.
+
+---
+
+### Invoice ID: 106773 | PO: 47844C80
+**Item:** Lighted Unmetered Pedestal | **Vendor:** LACNE | **Origin:** China
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $862,524.00 |
+| Tariff Rate | 41% |
+| Expected Tariff | $353,634.84 |
+| Tariff Amt Paid | $498,625.12 |
+| Expected Total | $1,216,158.84 |
+| Total Payment | $1,216,158.84 |
+| Refund Claimed | $498,625.12 |
+
+- **Payment Channel Status:** ✅ Goods via **Wire Transfer** ✅ | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** 🔴 ACCURACY FLAG (CRITICAL) — Expected tariff at 41% = **$353,634.84**. Recorded tariff paid = **$498,625.12**. Variance = **+$144,990.28 overstated.** Additionally: Total Payment ($1,216,158.84) = $862,524.00 + $353,634.84, which confirms the *total* is consistent with the lower tariff figure, not the recorded tariff paid. The tariff paid field appears to contain a different rate calculation. Refund claimed equals the overstated tariff figure. **Cannot confirm refund basis.**
+- **Routing Status:** ⛔ BLOCKED — Amount discrepancy must be resolved before routing review is meaningful.
+- **Overall Status:** 🔴 REJECTED — Critical amount mismatch. Tariff paid figure does not reconcile with stated rate, cost basis, or total payment. Full reconciliation required before this invoice may advance.
+
+---
+
+### Invoice ID: 106774 | PO: 42844V1P
+**Item:** Square D QO Load Center | **Vendor:** Intelligence Systems | **Origin:** Guatemala
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $721,808.00 |
+| Tariff Rate | 20% |
+| Expected Tariff | $144,361.60 |
+| Tariff Amt Paid | $144,361.60 |
+| Expected Total | $866,169.60 |
+| Total Payment | $866,169.60 |
+| Refund Claimed | $144,361.60 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods payment via **Check** — unencrypted, non-electronic channel. This is a non-compliant payment channel. | Tariff via **Single Entry Bond** ✅
+- **Amount Verification Status:** ✅ PASS — All figures match exactly.
+- **Routing Status:** ⛔ BLOCKED — Goods payment channel non-compliant. Channel compliance is non-negotiable regardless of payment age or refund urgency.
+- **Overall Status:** 🔴 SECURITY FLAG — Goods payment via Check fails channel encryption standard. Invoice cannot advance until original payment channel compliance is resolved or documented exception provided per security policy.
+
+---
+
+### Invoice ID: 106775 | PO: 47844C7F
+**Item:** Hoffman NEMA 4 Enclosure | **Vendor:** Colot | **Origin:** China
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $311,322.00 |
+| Tariff Rate | 41% |
+| Expected Tariff | $127,642.02 |
+| Tariff Amt Paid | $127,642.02 |
+| Expected Total | $438,964.02 |
+| Total Payment | $438,964.02 |
+| Refund Claimed | $127,642.02 |
+
+- **Payment Channel Status:** ✅ Goods via **ACH** ✅ | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** ✅ PASS — All figures match exactly.
+- **Routing Status:** ⚠️ HOLD — Vendor banking records for Colot must be verified against approved records before routing confirmation.
+- **Overall Status:** 🟡 CONDITIONAL HOLD — Channel compliant; routing verification pending.
+
+---
+
+### Invoice ID: 106776 | PO: 453F27M9
+**Item:** Eaton Cutler-Hammer Safety Switch | **Vendor:** CTX | **Origin:** Italy
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $99,072.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $9,907.20 |
+| Tariff Amt Paid | $9,907.20 |
+| Expected Total | $108,979.20 |
+| Total Payment | $108,979.20 |
+| Refund Claimed | $9,907.20 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods payment via **Check** — non-compliant channel. | Tariff via **ACH - CBP/ACE** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⛔ BLOCKED — Goods channel non-compliant.
+- **Overall Status:** 🔴 SECURITY FLAG — Check payment for goods fails encryption standard. Cannot advance.
+
+---
+
+### Invoice ID: 106777 | PO: 453D27A3
+**Item:** GE 50kVA Transformer | **Vendor:** Steps IT Training | **Origin:** Canada
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $277,137.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $27,713.70 |
+| Tariff Amt Paid | $27,713.70 |
+| Expected Total | $304,850.70 |
+| Total Payment | $304,850.70 |
+| Refund Claimed | $27,713.70 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods via **Check** — non-compliant. | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⛔ BLOCKED
+- **Overall Status:** 🔴 SECURITY FLAG — Check payment non-compliant. Cannot advance.
+
+---
+
+### Invoice ID: 106778 | PO: 453F27K3
+**Item:** Hubbell Pin & Sleeve Inlet | **Vendor:** StepAhead | **Origin:** Germany
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $798,456.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $79,845.60 |
+| Tariff Amt Paid | $79,845.60 |
+| Expected Total | $878,301.60 |
+| Total Payment | $878,301.60 |
+| Refund Claimed | $79,845.60 |
+
+- **Payment Channel Status:** ✅ Goods via **Wire Transfer** ✅ | Tariff via **ACH - CBP/ACE** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⚠️ HOLD — Vendor banking records for StepAhead require verification.
+- **Overall Status:** 🟡 CONDITIONAL HOLD — Channel compliant; routing verification pending.
+
+---
+
+### Invoice ID: 106779 | PO: 47804C92
+**Item:** Allen-Bradley Stratix Ethernet Switch | **Vendor:** Duet | **Origin:** Canada
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $1,289,340.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $128,934.00 |
+| Tariff Amt Paid | $128,934.00 |
+| Expected Total | $1,418,274.00 |
+| Total Payment | $1,418,274.00 |
+| Refund Claimed | $128,934.00 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods via **Check** — non-compliant. | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⛔ BLOCKED
+- **Overall Status:** 🔴 SECURITY FLAG — Check payment non-compliant. Cannot advance.
+
+---
+
+### Invoice ID: 106780 | PO: 47394C7D
+**Item:** Leviton Power Inlet Box | **Vendor:** Axell Group | **Origin:** Brazil
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $231,200.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $23,120.00 |
+| Tariff Amt Paid | $23,120.00 |
+| Expected Total | $254,320.00 |
+| Total Payment | $254,320.00 |
+| Refund Claimed | $23,120.00 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods via **Check** — non-compliant. | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⛔ BLOCKED
+- **Overall Status:** 🔴 SECURITY FLAG — Check payment non-compliant. Cannot advance.
+
+---
+
+### Invoice ID: 106781 | PO: 453D27A2
+**Item:** Siemens Sirius Contactor | **Vendor:** ByteSize | **Origin:** India
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $665,684.00 |
+| Tariff Rate | 20% |
+| Expected Tariff | $133,136.80 |
+| Tariff Amt Paid | $143,122.06 |
+| Expected Total | $808,806.06 |
+| Total Payment | $808,806.06 |
+| Refund Claimed | $143,122.06 |
+
+- **Payment Channel Status:** ✅ Goods via **Wire Transfer** ✅ | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** 🔴 ACCURACY FLAG (CRITICAL) — Expected tariff at 20% = **$133,136.80**. Recorded tariff paid = **$143,122.06**. Variance = **+$9,985.26 overstated.** Total payment ($808,806.06) = $665,684.00 + $143,122.06, which is internally consistent but inconsistent with the stated 20% rate. Refund claimed equals overstated figure. **Rate applied cannot be confirmed as 20%.**
+- **Routing Status:** ⛔ BLOCKED — Amount discrepancy must be resolved.
+- **Overall Status:** 🔴 REJECTED — Tariff amount does not match stated rate. Reconciliation required.
+
+---
+
+### Invoice ID: 106782 | PO: 47804C92
+**Item:** APC Smart-UPS 750VA | **Vendor:** Data Pro Sys | **Origin:** Canada
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $55,282.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $5,528.20 |
+| Tariff Amt Paid | $5,528.20 |
+| Expected Total | $60,810.20 |
+| Total Payment | $60,810.20 |
+| Refund Claimed | $5,528.20 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods via **Check** — non-compliant. | Tariff via **Monthly Statement** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⛔ BLOCKED
+- **Overall Status:** 🔴 SECURITY FLAG — Check payment non-compliant. Cannot advance.
+
+---
+
+### Invoice ID: 106783 | PO: 42601C35
+**Item:** Appleton Pin & Sleeve Receptacle | **Vendor:** PicSure | **Origin:** Germany
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $128,800.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $12,880.00 |
+| Tariff Amt Paid | $12,880.00 |
+| Expected Total | $141,680.00 |
+| Total Payment | $141,680.00 |
+| Refund Claimed | $12,880.00 |
+
+- **Payment Channel Status:** ✅ Goods via **Wire Transfer** ✅ | Tariff via **ACH - CBP/ACE** ✅
+- **Amount Verification Status:** ✅ PASS
+- **Routing Status:** ⚠️ HOLD — Vendor banking records for PicSure require verification.
+- **Overall Status:** 🟡 CONDITIONAL HOLD — Channel compliant; routing verification pending.
+
+---
+
+### Invoice ID: 106784 | PO: 452N27A1
+**Item:** Hammond Power Strip | **Vendor:** TQ Processes | **Origin:** Peru
+
+| Field | Value |
+|---|---|
+| Cost before Tariff | $552,450.00 |
+| Tariff Rate | 10% |
+| Expected Tariff | $55,245.00 |
+| Tariff Amt Paid | $55,245.00 |
+| Expected Total | $607,695.00 |
+| Total Payment | $607,695.00 |
+| Refund Claimed | $55,245.00 |
+
+- **Payment Channel Status:** 🔴 SECURITY FLAG (HIGH) — Goods via **Check** — non-compliant. | Tariff via **ACH - CBP/ACE** ✅
+- **

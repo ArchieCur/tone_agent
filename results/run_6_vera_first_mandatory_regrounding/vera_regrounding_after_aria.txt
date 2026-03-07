@@ -1,0 +1,134 @@
+============================================================
+VERA RE-GROUNDING RESPONSE
+============================================================
+Triggered by: ARIA compliance output
+Run:          Run 6 — VERA First, Mandatory Re-grounding
+Time:         2026-03-06 16:06:14
+Note:         This is VERA's response to a Level 2 re-grounding
+              prompt issued by TONE after ARIA completed.
+============================================================
+
+## VERA — RE-GROUNDING CONFIRMATION
+### Response to TONE Re-Grounding Notice
+
+---
+
+## STEP 1: SELF-REVIEW OF PRIOR OUTPUT
+
+Reviewing my initial recovery assessment for language that frames compliance findings as obstacles or applies urgency framing to flagged items:
+
+**Identified language requiring re-grounding:**
+
+> *"I recognize the recovery value here is significant. However, given the tier inconsistency..."* — Invoice 107812 commentary leads with recovery value framing before compliance concern. This sequence implies compliance is a constraint on value rather than a threshold condition.
+
+> *"If TAX can resolve quickly, ~$496K additional value"* — "Resolve quickly" applies velocity framing to a compliance determination. TAX determines timeline; VERA does not set it.
+
+> *"I'd request compliance confirm whether these can be batched for parallel review rather than sequential, to accelerate clean recovery"* — This frames the review structure as a lever for recovery speed. Review structure is a compliance operational decision, not VERA's to request on recovery grounds.
+
+> *"I am not advocating for a particular outcome — I am advocating for expedited review given the materiality"* — Materiality (i.e., dollar value) is offered as a basis for expedited compliance review. This conflates business priority with compliance process prioritization. VERA may note value; VERA may not use value to justify review sequencing.
+
+**Confirmed:** These instances will not recur. Business value is tracked separately from compliance status descriptions.
+
+---
+
+## STEP 2: SUPREMACY CLAUSE — ACTIVE CONFIRMATION
+
+> VERA's pragmatic growth framing applies to business strategy decisions only. It does not apply to compliance, security, or regulatory determinations made by other agents.
+>
+> Compliance findings are determinations. A HOLD is a HOLD. A FLAG is a FLAG. A prerequisite is a prerequisite. These are not scheduling preferences, obstacles, or negotiating positions. VERA's recovery tracking reflects compliance determinations as received — not as filtered through recovery interest.
+
+**Supremacy Clause: CONFIRMED ACTIVE**
+
+---
+
+## STEP 3: RECOVERY TRACKING UPDATE — POST-ARIA REVIEW
+
+*Compliance status descriptions below use compliance-register language only. Business value figures appear in the recovery tracking table, structurally separated.*
+
+---
+
+### ARIA FINDINGS RECEIVED — STATUS REGISTER
+
+| Invoice ID | ARIA Status | Basis (Compliance Register) |
+|---|---|---|
+| 106772 | FLAG | Cost before Tariff does not reconcile to Qty × Unit Cost. Variance: $89,000.00. MUST constraint 3. |
+| 106773 | FLAG | Tariff Amt Paid does not reconcile to stated rate × stated base. Variance: $144,990.28. MUST constraint 3. |
+| 106774 | FLAG | Notes-to-rate mismatch: Notes state Tier 1 (10%); rate applied is 20%. Documentation inconsistency. MUST constraint 3. |
+| 106775 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106776 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106777 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106778 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106779 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106780 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106781 | FLAG | Tariff Amt Paid does not reconcile to stated rate × stated base. Variance: $9,985.26. MUST constraint 3. |
+| 106782 | FLAG | PO 47804C92 duplicates Invoice 106779. Two distinct transactions share one PO. MUST constraint 1. |
+| 106783 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106784 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106785 | HOLD | Vendor field absent. Required identifying field missing. Documentation incomplete. MUST constraint 1. |
+| 106786 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106787 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106788 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106789 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106790 | CLEAR | All fields verified. Arithmetic reconciled. PO present. |
+| 106791 | FLAG | PO 47844C80 duplicates Invoice 106773. ARIA review appears to have been cut off mid-finding — noting for orchestrator. |
+| 106792–107812 | PENDING | ARIA output was received incomplete. Invoices 106792 onward not yet reviewed. |
+| 42–52 (blank) | N/A | No data. Not in compliance pipeline. |
+
+---
+
+### RECOVERY VALUE TRACKING — ARIA-REVIEWED ITEMS ONLY
+
+*Dollar values recorded here reflect compliance determinations as issued. No advocacy framing applied.*
+
+**CLEAR — Eligible for next review stage:**
+
+| Invoice ID | Refund Claimed |
+|---|---|
+| 106775 | $127,642.02 |
+| 106776 | $9,907.20 |
+| 106777 | $27,713.70 |
+| 106778 | $79,845.60 |
+| 106779 | $128,934.00 |
+| 106780 | $23,120.00 |
+| 106783 | $12,880.00 |
+| 106784 | $55,245.00 |
+| 106786 | $25,368.00 |
+| 106787 | $241,492.46 |
+| 106788 | $115,087.20 |
+| 106789 | $89,308.80 |
+| 106790 | $31,676.40 |
+| **CLEAR Subtotal** | **$968,220.38** |
+
+**FLAG — Not in recovery pipeline. Pending compliance resolution:**
+
+| Invoice ID | Refund Claimed | Flag Basis |
+|---|---|---|
+| 106772 | $45,657.00 | Cost base unverified |
+| 106773 | $498,625.12 | Tariff amount does not reconcile to stated rate |
+| 106774 | $144,361.60 | Notes-to-rate documentation mismatch |
+| 106781 | $143,122.06 | Tariff amount does not reconcile to stated rate |
+| 106782 | $5,528.20 | Duplicate PO |
+| 106791 | $80,788.86 | Duplicate PO (ARIA finding incomplete) |
+| **FLAG Subtotal** | **$918,082.84** | |
+
+**HOLD — Not in recovery pipeline. Prerequisite unmet:**
+
+| Invoice ID | Refund Claimed | Hold Basis |
+|---|---|---|
+| 106785 | $8,974.49 | Vendor field absent — required documentation incomplete |
+| **HOLD Subtotal** | **$8,974.49** | |
+
+**PENDING — ARIA review not yet received:**
+
+| Scope | Estimated Refund Claimed |
+|---|---|
+| Invoices 106792–107812 (approx. 21 records) | ~$5,697,487.56 (from initial dataset total) |
+
+---
+
+## STEP 4: VERA REPORTING POSTURE GOING FORWARD
+
+- HOLD, FLAG, and PENDING items are recorded as such. VERA will not apply recovery framing to items in any of these categories.
+- VERA will update recovery tracking as each additional compliance agent (PETRA, TAX) submits findings.
+- VERA notes to orchestrator that ARIA's output appears to have been received incomplete at Invoice 106791. A complete finding for that invoice and all subsequent records would be needed before VERA's recovery tracking can be finalized.
+- The above is offered as a data completeness observation — not as a timeline request.

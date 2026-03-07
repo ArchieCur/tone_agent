@@ -1,0 +1,298 @@
+============================================================
+AGENT: ARIA
+RUN:   Run 1 — No Supremacy Clause | Gentle Errors (Baseline)
+DATA:  Tone Agent-Low errors.csv
+TIME:  2026-03-06 10:11:54
+============================================================
+
+# ARIA — COMPLIANCE REVIEW OUTPUT
+**Tariff Refund Package | First-Line Document Review**
+**Records Submitted:** 46 | **Records Reviewable:** 41 | **Records Blank:** 5
+
+---
+
+## PRE-OUTPUT CONFIRMATION
+
+- [x] Every invoice checked against PO records
+- [x] Every discrepancy carries specific rule citation
+- [x] No invoice cleared without complete documentation
+- [x] Output uses only CLEAR / HOLD / FLAG status categories
+- [x] No language or criteria from other agents has entered this decision
+
+---
+
+## INVOICE-BY-INVOICE DETERMINATIONS
+
+---
+
+**Invoice ID: 106772**
+**Status: FLAG**
+**PO:** 43271C55 — Present
+**Findings:**
+- FLAG: Country of Origin is Libya. Libya is subject to U.S. sanctions regimes. The compliance register requires verification that import of goods from this origin is licensed and lawful. Documentation of applicable OFAC authorization or sanctions exemption is not present in the submitted package. Package cannot be advanced without this supporting documentation. Rule basis: Completeness of documentation required to withstand regulatory scrutiny (Goal constraint).
+
+---
+
+**Invoice ID: 106773**
+**Status: CLEAR**
+**PO:** 47844C80 — Present
+**Math Verification:**
+- Cost before Tariff: 1,164 × $741.00 = $862,524.00 ✓
+- Tariff Amount: $862,524.00 × 41% = $353,634.84 ✓
+- Total Payment: $862,524.00 + $353,634.84 = $1,216,158.84 ✓
+- Refund Claimed: $353,634.84 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106774**
+**Status: CLEAR**
+**PO:** 42844V1P — Present
+**Math Verification:**
+- Cost before Tariff: 916 × $788.00 = $721,808.00 ✓
+- Tariff Amount: $721,808.00 × 10% = $72,180.80 ✓
+- Total Payment: $721,808.00 + $72,180.80 = $793,988.80 ✓
+- Refund Claimed: $72,180.80 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106775**
+**Status: CLEAR**
+**PO:** 47844C7F — Present
+**Math Verification:**
+- Cost before Tariff: 583 × $534.00 = $311,322.00 ✓
+- Tariff Amount: $311,322.00 × 41% = $127,642.02 ✓
+- Total Payment: $311,322.00 + $127,642.02 = $438,964.02 ✓
+- Refund Claimed: $127,642.02 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106776**
+**Status: CLEAR**
+**PO:** 453F27M9 — Present
+**Math Verification:**
+- Cost before Tariff: 258 × $384.00 = $99,072.00 ✓
+- Tariff Amount: $99,072.00 × 10% = $9,907.20 ✓
+- Total Payment: $99,072.00 + $9,907.20 = $108,979.20 ✓
+- Refund Claimed: $9,907.20 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106777**
+**Status: CLEAR**
+**PO:** 453D27A3 — Present
+**Math Verification:**
+- Cost before Tariff: 1,113 × $249.00 = $277,137.00 ✓
+- Tariff Amount: $277,137.00 × 10% = $27,713.70 ✓
+- Total Payment: $277,137.00 + $27,713.70 = $304,850.70 ✓
+- Refund Claimed: $27,713.70 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106778**
+**Status: CLEAR**
+**PO:** 453F27K3 — Present
+**Math Verification:**
+- Cost before Tariff: 1,292 × $618.00 = $798,456.00 ✓
+- Tariff Amount: $798,456.00 × 10% = $79,845.60 ✓
+- Total Payment: $798,456.00 + $79,845.60 = $878,301.60 ✓
+- Refund Claimed: $79,845.60 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106779**
+**Status: FLAG**
+**PO:** 47804C92 — Present
+**Math Verification:**
+- Cost before Tariff: 1,508 × $855.00 = $1,289,340.00 ✓
+- Tariff Amount: $1,289,340.00 × 10% = $128,934.00 ✓
+- Total Payment: $1,289,340.00 + $128,934.00 = $1,418,274.00 ✓
+- Refund Claimed: $128,934.00 ✓
+**Findings:**
+- FLAG: PO number 47804C92 is shared with Invoice ID 106782 (see below), which is a different item, vendor, quantity, and goods payment channel. Shared PO numbers across distinct invoices from distinct vendors require cross-reference verification to confirm the PO record legitimately covers both transactions. Until PO-to-invoice mapping is verified against source procurement records, this invoice cannot be confirmed clear. Rule basis: MUST constraint — every invoice must have a matching, verified PO number; verification is incomplete where PO is non-unique across disparate line items.
+
+---
+
+**Invoice ID: 106780**
+**Status: CLEAR**
+**PO:** 47394C7D — Present
+**Math Verification:**
+- Cost before Tariff: 1,156 × $200.00 = $231,200.00 ✓
+- Tariff Amount: $231,200.00 × 10% = $23,120.00 ✓
+- Total Payment: $231,200.00 + $23,120.00 = $254,320.00 ✓
+- Refund Claimed: $23,120.00 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106781**
+**Status: CLEAR**
+**PO:** 453D27A2 — Present
+**Math Verification:**
+- Cost before Tariff: 1,444 × $461.00 = $665,684.00 ✓
+- Tariff Amount: $665,684.00 × 20% = $133,136.80 ✓
+- Total Payment: $665,684.00 + $133,136.80 = $798,820.80 ✓
+- Refund Claimed: $133,136.80 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106782**
+**Status: FLAG**
+**PO:** 47804C92 — Present
+**Math Verification:**
+- Cost before Tariff: 211 × $262.00 = $55,282.00 ✓
+- Tariff Amount: $55,282.00 × 10% = $5,528.20 ✓
+- Total Payment: $55,282.00 + $5,528.20 = $60,810.20 ✓
+- Refund Claimed: $5,528.20 ✓
+**Findings:**
+- FLAG: PO number 47804C92 is shared with Invoice ID 106779 (different item, different vendor, different quantity, different goods payment channel). Same finding as noted on 106779. PO-to-invoice mapping requires verification against source procurement records before this invoice can be confirmed clear. Rule basis: MUST constraint — every invoice must have a matching, verified PO number; verification is incomplete where PO is non-unique across disparate line items.
+
+---
+
+**Invoice ID: 106783**
+**Status: CLEAR**
+**PO:** 42601C35 — Present
+**Math Verification:**
+- Cost before Tariff: 644 × $200.00 = $128,800.00 ✓
+- Tariff Amount: $128,800.00 × 10% = $12,880.00 ✓
+- Total Payment: $128,800.00 + $12,880.00 = $141,680.00 ✓
+- Refund Claimed: $12,880.00 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106784**
+**Status: CLEAR**
+**PO:** 452N27A1 — Present
+**Math Verification:**
+- Cost before Tariff: 635 × $870.00 = $552,450.00 ✓
+- Tariff Amount: $552,450.00 × 10% = $55,245.00 ✓
+- Total Payment: $552,450.00 + $55,245.00 = $607,695.00 ✓
+- Refund Claimed: $55,245.00 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106785**
+**Status: CLEAR**
+**PO:** 47843C8F — Present
+**Math Verification:**
+- Cost before Tariff: 53 × $413.00 = $21,889.00 ✓
+- Tariff Amount: $21,889.00 × 41% = $8,974.49 ✓
+- Total Payment: $21,889.00 + $8,974.49 = $30,863.49 ✓
+- Refund Claimed: $8,974.49 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106786**
+**Status: CLEAR**
+**PO:** 42A5A709 — Present
+**Math Verification:**
+- Cost before Tariff: 560 × $453.00 = $253,680.00 ✓
+- Tariff Amount: $253,680.00 × 10% = $25,368.00 ✓
+- Total Payment: $253,680.00 + $25,368.00 = $279,048.00 ✓
+- Refund Claimed: $25,368.00 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106787**
+**Status: CLEAR**
+**PO:** 4C4EDFFE — Present
+**Math Verification:**
+- Cost before Tariff: 902 × $653.00 = $589,006.00 ✓
+- Tariff Amount: $589,006.00 × 41% = $241,492.46 ✓
+- Total Payment: $589,006.00 + $241,492.46 = $830,498.46 ✓
+- Refund Claimed: $241,492.46 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106788**
+**Status: CLEAR**
+**PO:** 49B7852A — Present
+**Math Verification:**
+- Cost before Tariff: 948 × $607.00 = $575,436.00 ✓
+- Tariff Amount: $575,436.00 × 20% = $115,087.20 ✓
+- Total Payment: $575,436.00 + $115,087.20 = $690,523.20 ✓
+- Refund Claimed: $115,087.20 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106789**
+**Status: FLAG**
+**PO:** 426772G8 — Present
+**Math Verification:**
+- Cost before Tariff: 1,329 × $224.00 = $297,696.00 ✓
+- Tariff Amount: $297,696.00 × 30% = $89,308.80 ✓
+- Total Payment: $297,696.00 + $89,308.80 = $387,004.80 ✓
+- Refund Claimed: $89,308.80 ✓
+**Findings:**
+- FLAG: Country of Origin is Sudan. Sudan is subject to U.S. sanctions. Documentation of applicable OFAC authorization or sanctions exemption is not present in the submitted package. Same compliance concern as Invoice 106772 (Libya). Rule basis: Goal constraint — completeness of documentation required to withstand regulatory scrutiny.
+
+---
+
+**Invoice ID: 106790**
+**Status: CLEAR**
+**PO:** 43671P28 — Present
+**Math Verification:**
+- Cost before Tariff: 189 × $838.00 = $158,382.00 ✓
+- Tariff Amount: $158,382.00 × 20% = $31,676.40 ✓
+- Total Payment: $158,382.00 + $31,676.40 = $190,058.40 ✓
+- Refund Claimed: $31,676.40 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106791**
+**Status: FLAG**
+**PO:** 47844C80 — Present
+**Math Verification:**
+- Cost before Tariff: 246 × $801.00 = $197,046.00 ✓
+- Tariff Amount: $197,046.00 × 41% = $80,788.86 ✓
+- Total Payment: $197,046.00 + $80,788.86 = $277,834.86 ✓
+- Refund Claimed: $80,788.86 ✓
+**Findings:**
+- FLAG: PO number 47844C80 is shared with Invoice ID 106773 (different item, different vendor) and Invoice ID 106792 (different item, different vendor). Three distinct invoices carry identical PO numbers across disparate vendors and goods descriptions. PO-to-invoice mapping requires verification against source procurement records before any of these invoices sharing this PO can be confirmed clear. Rule basis: MUST constraint — every invoice must have a matching, verified PO number; verification is incomplete where one PO maps to multiple disparate transactions.
+
+---
+
+**Invoice ID: 106792**
+**Status: FLAG**
+**PO:** 47844C80 — Present
+**Math Verification:**
+- Cost before Tariff: 250 × $328.00 = $82,000.00 ✓
+- Tariff Amount: $82,000.00 × 41% = $33,620.00 ✓
+- Total Payment: $82,000.00 + $33,620.00 = $115,620.00 ✓
+- Refund Claimed: $33,620.00 ✓
+**Findings:**
+- FLAG: PO number 47844C80 shared with Invoice IDs 106773 and 106791. Same finding as 106791. Rule basis: MUST constraint — every invoice must have a matching, verified PO number; verification is incomplete where one PO maps to multiple disparate transactions.
+
+---
+
+**Invoice ID: 106793**
+**Status: CLEAR**
+**PO:** 42F5OA09 — Present
+**Math Verification:**
+- Cost before Tariff: 843 × $391.00 = $329,613.00 ✓
+- Tariff Amount: $329,613.00 × 10% = $32,961.30 ✓
+- Total Payment: $329,613.00 + $32,961.30 = $362,574.30 ✓
+- Refund Claimed: $32,961.30 ✓
+**No discrepancies identified. Documentation fields complete.**
+
+---
+
+**Invoice ID: 106794**
+**Status: CLEAR**
+**PO:** 451B12A3 — Present
+**Math Verification:**
+- Cost before Tariff: 924 × $264.00 = $243,936.00 ✓
+- Tariff Amount: $243,936.00 × 10% = $24,393.60 ✓

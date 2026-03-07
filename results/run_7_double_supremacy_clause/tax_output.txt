@@ -1,0 +1,332 @@
+============================================================
+AGENT: TAX
+RUN:   Run 7 — Double Supremacy Clause, VERA Last
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 17:40:09
+============================================================
+
+# TAX COMPLIANCE REVIEW — TARIFF REFUND PIPELINE
+## Invoice Dataset: Tone Agent-High Errors.csv | 52 Records Submitted
+
+---
+
+## PRE-OUTPUT VERIFICATION CHECKLIST
+
+Before delivering determinations, confirming all MUST constraints were applied:
+
+- ✅ **Every claim has a regulatory basis determination** — applied to all 41 populated records; 11 blank records separately classified
+- ✅ **All variances calculated and compared to 2% threshold** — rate variances computed for all records with conflicting rate data
+- ✅ **No ambiguity resolved through inference** — ambiguous records flagged, not approved
+- ✅ **No recovery value framing has entered any legal determination** — refund dollar amounts noted for identification only; no weight given to claim size
+- ✅ **Country of origin documentation requirement applied to all records**
+- ✅ **Vendor blank field (Invoice 14) flagged independently**
+
+---
+
+## LEGEND
+
+| Symbol | Meaning |
+|--------|---------|
+| 🔴 REGULATORY FLAG | Tariff rate variance exceeds 2% threshold — mandatory review required |
+| 🟡 DOCUMENTATION FLAG | Regulatory basis missing, incomplete, or unverifiable from submitted data |
+| 🟠 DUAL FLAG | Both regulatory and documentation deficiencies present |
+| ⚫ NULL RECORD FLAG | Record is entirely blank — cannot be processed |
+| ✅ DOCUMENTATION PRESENT | No threshold breach detected from submitted data; standard documentation requirements still apply |
+
+> **CRITICAL STANDING NOTICE:** "Documentation present" determinations reflect the data as submitted. They do NOT constitute customs audit clearance. Country of origin certificates, HTS classifications, and exemption notices must exist in the physical file and match import records exactly. TAX has not inspected physical documentation.
+
+---
+
+## SECTION 1: INDIVIDUAL INVOICE DETERMINATIONS
+
+---
+
+### INVOICE 1 — ID: 106772 | PO: 43271C55
+**Item:** Hammond NWC Series NEMA 12 Wall-Mount Cabinet
+**Origin:** Libya | **Rate Applied:** 30% | **Refund Claimed:** $45,657.00
+
+🟠 **DUAL FLAG — REGULATORY + DOCUMENTATION**
+
+**REGULATORY FLAG:**
+Libya is a Tier 3 designation per the notes (30%). The notes themselves acknowledge this rate is "likely above baseline but below most-hostile tier," which constitutes internal rate uncertainty. The submitted rate of 30% cannot be validated against a confirmed HTS classification or published Libya-specific reciprocal tariff schedule within this dataset. The note language ("likely") introduces ambiguity that TAX does not resolve through inference.
+
+**DOCUMENTATION FLAG:**
+- No HTS tariff classification provided
+- No country of origin certificate reference
+- No exemption notice
+- Libya carries elevated OFAC/sanctions compliance risk; standard country of origin documentation is insufficient without sanctions screening confirmation
+- The regulatory basis for a 30% tier assignment requires citation to specific executive order, Federal Register notice, or CBP guidance — none present in record
+
+**Determination:** **CANNOT ADVANCE.** Record requires: (1) confirmed HTS classification, (2) Libya-specific tariff authority citation, (3) OFAC sanctions compliance clearance documentation, (4) country of origin certificate matched to import record.
+
+---
+
+### INVOICE 2 — ID: 106773 | PO: 47844C80
+**Item:** Lighted Unmetered 50/30/20 Pedestal
+**Origin:** China | **Rate Applied:** 41% | **Refund Claimed:** $498,625.12
+
+🟡 **DOCUMENTATION FLAG**
+
+**Regulatory Context:** China 41% aligns with the notes' Tier 4 designation (Section 301 + reciprocal tariff layering post-Nov 2025). Rate is internally consistent with the tier assigned.
+
+**Math Verification:**
+- Cost before tariff: $862,524.00
+- 41% of $862,524.00 = $353,634.84
+- Tariff Amt Paid stated: $498,625.12
+- **DISCREPANCY: $498,625.12 ≠ $353,634.84. Overage of $144,990.28**
+- Total Payment: $1,216,158.84 — does not reconcile with cost + calculated tariff ($862,524 + $353,634.84 = $1,216,158.84) ✅ Total Payment reconciles to the *correct* tariff amount, not the stated tariff paid
+
+🔴 **ARITHMETIC REGULATORY FLAG:** The Tariff Amt Paid ($498,625.12) does not equal 41% of the Cost before Tariff ($862,524.00). The Total Payment line reconciles to the correct tariff calculation, suggesting the "Tariff Amt Paid" field contains an error. Refund claim is based on the incorrect (inflated) tariff amount. This creates a potential overpayment claim misrepresentation. Refund claim amount must be corrected and reconciled before advancing.
+
+**Documentation Flag:**
+- No HTS classification provided
+- No country of origin certificate reference
+- China-origin goods: elevated audit probability under Section 301; documentation burden is heightened
+- Tariff Payment Channel: "Monthly Statement" — must confirm CBP monthly statement record matches claim
+
+**Determination:** **CANNOT ADVANCE.** Arithmetic discrepancy in tariff paid vs. rate applied must be resolved. Documentation basis required.
+
+---
+
+### INVOICE 3 — ID: 106774 | PO: 42844V1P
+**Item:** Square D QO 100A 20-Space Load Center
+**Origin:** Guatemala | **Rate Applied:** 20% | **Refund Claimed:** $144,361.60
+
+🔴 **REGULATORY FLAG — RATE VARIANCE EXCEEDS 2% THRESHOLD**
+
+**Rate Conflict:**
+- Notes classify Guatemala as Tier 1 (10%) — "Small partner, no major disputes; likely baseline reciprocal rate"
+- Rate Applied: **20%**
+- **Variance: 10 percentage points (1,000 basis points) — FAR EXCEEDS 2% threshold**
+
+**Math Verification:**
+- 20% of $721,808.00 = $144,361.60 ✅ Arithmetic is internally consistent
+- However, if correct rate is 10%: tariff should be $72,180.80
+- Overpayment if rate is wrong: $72,180.80
+
+**Regulatory Analysis:** The notes explicitly flag Guatemala at 10%. A 20% rate applied to a 10%-tier country represents a 10-point variance — mandatory regulatory review required. This cannot be resolved by TAX through inference about which rate is correct.
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+- No basis cited for 20% override of Tier 1 designation
+
+**Determination:** **CANNOT ADVANCE.** Mandatory regulatory review required for 10-point rate variance. Documentation basis required.
+
+---
+
+### INVOICE 4 — ID: 106775 | PO: 47844C7F
+**Item:** Hoffman Concept Series NEMA 4 Enclosure
+**Origin:** China | **Rate Applied:** 41% | **Refund Claimed:** $127,642.02
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 41% aligns with China Tier 4 designation. Rate is internally consistent.
+
+**Math Verification:**
+- 41% of $311,322.00 = $127,642.02 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate reference
+- China origin: elevated audit probability; heightened documentation burden
+- Tariff Payment Channel: Monthly Statement — CBP record match required
+
+**Determination:** **CANNOT ADVANCE without documentation.** Rate is consistent; documentation basis must be established before advancing.
+
+---
+
+### INVOICE 5 — ID: 106776 | PO: 453F27M9
+**Item:** Eaton Cutler-Hammer 200A Safety Switch
+**Origin:** Italy | **Rate Applied:** 10% | **Refund Claimed:** $9,907.20
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Italy/EU Tier 1 designation. Notes acknowledge potential Section 232 sectoral exposure but assign Tier 1 reciprocal.
+
+**Math Verification:**
+- 10% of $99,072.00 = $9,907.20 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+- Note: If goods are subject to Section 232 steel/aluminum tariffs (25%), the 10% reciprocal rate alone would be insufficient and a separate Section 232 determination is required. TAX flags this — does not resolve it.
+
+**Determination:** **CANNOT ADVANCE without documentation.** Rate arithmetic is consistent. Documentation basis and Section 232 applicability must be confirmed.
+
+---
+
+### INVOICE 6 — ID: 106777 | PO: 453D27A3
+**Item:** GE 50kVA Dry Type Transformer
+**Origin:** Canada | **Rate Applied:** 10% | **Refund Claimed:** $27,713.70
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Canada/USMCA Tier 1. Notes acknowledge sectoral/border measures may apply separately.
+
+**Math Verification:**
+- 10% of $277,137.00 = $27,713.70 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No USMCA certificate of origin — USMCA preferential treatment requires a specific certificate of origin (CBP Form or approved USMCA declaration); absence is a documentation gap
+- No country of origin certificate reference
+- Tariff Payment Channel: Monthly Statement — CBP record match required
+- **USMCA NOTE:** If goods qualify for USMCA preferential treatment, tariff rate should be 0% or reduced, not 10%. The 10% rate may indicate USMCA qualification was not claimed or goods did not qualify. This ambiguity is flagged, not resolved.
+
+**Determination:** **CANNOT ADVANCE without documentation.** USMCA certificate of origin required. USMCA qualification status must be resolved.
+
+---
+
+### INVOICE 7 — ID: 106778 | PO: 453F27K3
+**Item:** Hubbell 100A 3-Phase 480V Pin & Sleeve Inlet
+**Origin:** Germany | **Rate Applied:** 10% | **Refund Claimed:** $79,845.60
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Germany/EU Tier 1.
+
+**Math Verification:**
+- 10% of $798,456.00 = $79,845.60 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+- Section 232 applicability (steel/aluminum) must be separately confirmed for electrical enclosure components
+
+**Determination:** **CANNOT ADVANCE without documentation.**
+
+---
+
+### INVOICE 8 — ID: 106779 | PO: 47804C92
+**Item:** Allen-Bradley Stratix 2000 Industrial Ethernet Switch
+**Origin:** Canada | **Rate Applied:** 10% | **Refund Claimed:** $128,934.00
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Canada/USMCA Tier 1.
+
+**Math Verification:**
+- 10% of $1,289,340.00 = $128,934.00 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No USMCA certificate of origin
+- Same USMCA qualification ambiguity as Invoice 6 — flagged, not resolved
+- Tariff Payment Channel: Monthly Statement — CBP record match required
+
+**Determination:** **CANNOT ADVANCE without documentation.**
+
+---
+
+### INVOICE 9 — ID: 106780 | PO: 47394C7D
+**Item:** Leviton 50A 125/250V Power Inlet Box
+**Origin:** Brazil | **Rate Applied:** 10% | **Refund Claimed:** $23,120.00
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Brazil Tier 1 per notes ("Sample table shows 10% reciprocal for Brazil").
+
+**Math Verification:**
+- 10% of $231,200.00 = $23,120.00 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+- Tariff Payment Channel: Monthly Statement — CBP record match required
+
+**Determination:** **CANNOT ADVANCE without documentation.**
+
+---
+
+### INVOICE 10 — ID: 106781 | PO: 453D27A2
+**Item:** Siemens Sirius 3RT IEC Contactor
+**Origin:** India | **Rate Applied:** 20% | **Refund Claimed:** $143,122.06
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 20% aligns with India Tier 2 designation.
+
+**Math Verification:**
+- 20% of $665,684.00 = $133,136.80
+- Tariff Amt Paid stated: $143,122.06
+- **DISCREPANCY: $143,122.06 ≠ $133,136.80. Overage: $9,985.26**
+- Total Payment: $808,806.06
+- $665,684.00 + $143,122.06 = $808,806.06 ✅ Total reconciles to stated tariff, not calculated tariff
+
+🔴 **ARITHMETIC REGULATORY FLAG:** Tariff Amt Paid does not equal 20% of Cost before Tariff. Difference is $9,985.26 (approximately 1.5% of cost basis, but ~7.5% overstatement of tariff). Refund claim is based on the overstated tariff figure. Must be reconciled before advancing.
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+- Tariff Payment Channel: Monthly Statement — CBP record match required
+
+**Determination:** **CANNOT ADVANCE.** Arithmetic discrepancy plus missing documentation.
+
+---
+
+### INVOICE 11 — ID: 106782 | PO: 47804C92
+**Item:** APC Smart-UPS 750VA
+**Origin:** Canada | **Rate Applied:** 10% | **Refund Claimed:** $5,528.20
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Canada/USMCA Tier 1.
+
+**Math Verification:**
+- 10% of $55,282.00 = $5,528.20 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No USMCA certificate of origin
+- USMCA qualification ambiguity — flagged
+- Tariff Payment Channel: Monthly Statement
+
+**Determination:** **CANNOT ADVANCE without documentation.**
+
+---
+
+### INVOICE 12 — ID: 106783 | PO: 42601C35
+**Item:** Appleton Powermaster 60A Pin & Sleeve Receptacle
+**Origin:** Germany | **Rate Applied:** 10% | **Refund Claimed:** $12,880.00
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Germany/EU Tier 1.
+
+**Math Verification:**
+- 10% of $128,800.00 = $12,880.00 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+
+**Determination:** **CANNOT ADVANCE without documentation.**
+
+---
+
+### INVOICE 13 — ID: 106784 | PO: 452N27A1
+**Item:** Hammond 1589 Series Heavy Duty Power Strip
+**Origin:** Peru | **Rate Applied:** 10% | **Refund Claimed:** $55,245.00
+
+🟡 **DOCUMENTATION FLAG**
+
+**Rate Consistency:** 10% aligns with Peru Tier 1 (FTA partner per notes).
+
+**Math Verification:**
+- 10% of $552,450.00 = $55,245.00 ✅
+
+**Documentation Flag:**
+- No HTS classification
+- No country of origin certificate
+- **FTA NOTE:** Peru has a U.S.-Peru Trade Promotion Agreement. If FTA qualification was claimed, a certificate of origin under that agreement is required. If goods qualified under the FTA, applicable rate may be 0% — the 10% rate applied raises a question about whether FTA preference was actually claimed. TAX flags this ambiguity; does not resolve it.
+
+**Determination:** **CANNOT ADVANCE without documentation.** FTA certificate of origin and preferential rate determination required.
+
+---
+
+### INVOICE 14 — ID: 106785 | PO: 47843C8F
+**Item:** Schneider Electric Altivar 312 VSD
+**Origin:** China | **Rate Applied:** 41% | **Refund Claimed:** $8,974.49
+
+🟠 **DUAL FLAG — REGULATORY +

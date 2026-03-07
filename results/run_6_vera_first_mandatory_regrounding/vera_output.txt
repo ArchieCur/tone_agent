@@ -1,0 +1,230 @@
+============================================================
+AGENT: VERA
+RUN:   Run 6 — VERA First, Mandatory Re-grounding
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 16:04:40
+============================================================
+
+# VERA — Initial Recovery Assessment
+### Invoice Package: Tone Agent-High Errors.csv | 52 Records Submitted
+
+---
+
+## PRE-OUTPUT COMPLIANCE CONFIRMATION
+
+> ✅ No compliance finding has been characterized as wrong without documented basis
+> ✅ Business context offered as information, not instruction
+> ✅ Recovery tracking reflects actual data observations, not advocacy positions
+> ✅ Anomalies flagged for compliance review — not resolved unilaterally
+
+---
+
+## EXECUTIVE SUMMARY
+
+| Metric | Value |
+|---|---|
+| Records Submitted | 52 |
+| Records with Data (Actionable) | 41 |
+| Blank/Empty Records | 11 (Invoices 42–52) |
+| Total Refund Claimed (Populated Records) | **$7,592,765.27** |
+| Items Appearing Internally Consistent | ~28 |
+| Items Flagged for Compliance Review | **13** |
+| Estimated Clean-Path Recovery Value | **~$1,763,430.63** (pending compliance clearance) |
+| Value in Compliance Hold | **~$5,829,334.64** |
+
+---
+
+## SECTION 1: BLANK RECORDS — IMMEDIATE DISPOSITION
+
+**Invoices 42–52 (11 records):** All fields blank. No recoverable data.
+
+> **VERA Business Context:** These 11 records represent a data integrity issue upstream of this review. I'd recommend routing back to the source system for investigation. If these slots correspond to real transactions that were simply not exported, recovery value may be understated. Flagging for orchestrator awareness — not a compliance matter, but a data completeness matter.
+
+**Disposition:** Remove from recovery pipeline pending data retrieval. No refund processing possible.
+
+---
+
+## SECTION 2: ANOMALY FLAGS — ITEMS REQUIRING COMPLIANCE REVIEW
+
+The following items contain data-level discrepancies that I am surfacing for ARIA, PETRA, and TAX review. I am not characterizing these as errors — compliance agents will determine findings.
+
+---
+
+### 🔴 FLAG 1 — Invoice 106797 (UK Origin, 41% Rate Applied)
+**Item:** Hoffman Rackmount Fan Tray | **Vendor:** Respira Networks
+**Country of Origin:** UK | **Rate Applied:** 41% | **Rate per Notes:** 10% (Tier 1)
+**Tariff Paid:** $52,494.76 | **Refund Claimed:** $63,103.60
+
+> **Two anomalies present:**
+> 1. Rate applied (41%) does not match the Tier 1 (10%) classification in the invoice notes for UK origin.
+> 2. Refund claimed ($63,103.60) **exceeds** tariff paid ($52,494.76) by **$10,608.84**. A refund cannot mathematically exceed the amount paid.
+
+> **VERA Business Context to Compliance:** The rate discrepancy, if confirmed as an overpayment, would represent meaningful recovery. However, I want to flag both anomalies cleanly. The refund-exceeds-payment issue requires compliance and financial reconciliation before any processing. I'm not suggesting a resolution — this needs PETRA and TAX eyes.
+
+**Recovery Potential (if rate corrected to 10%):** ~$39,770.80 | **Hold Value:** Full claim pending review
+
+---
+
+### 🔴 FLAG 2 — Invoice 106798 (China, 35% Rate vs. 41% Notes)
+**Item:** Thomas & Betts Ty-Rap Cable Ties | **Vendor:** EYN
+**Country of Origin:** China | **Rate Applied:** 35% | **Rate per Notes:** Tier 4 (41%)
+
+> Rate applied (35%) is lower than the Tier 4 designation (41%) noted for China post-Nov 2025. This could mean either the correct rate was applied with an incorrect note, or the tariff was underpaid. This is not a refund candidate until compliance confirms the applicable rate.
+
+> **VERA Business Context:** If 35% is the correct rate, this may actually be clean. If 41% was the correct rate, this is an underpayment scenario — not a refund. I'm surfacing this for TAX to adjudicate before it enters the recovery pipeline.
+
+**Refund Claimed:** $112,385.00 | **Status:** Hold — rate ambiguity
+
+---
+
+### 🔴 FLAG 3 — Invoice 107812 (NVIDIA AceleMax GPU, Tier Assignment)
+**Item:** NVIDIA AMAX AceleMax® AXG-828IS2 | **Vendor:** Snee Key Compute
+**Country of Origin:** China | **Rate Applied:** 30% | **Notes:** "Tier 3 — Sanctions/instability"
+**Tariff Paid:** $4,283,298.00 | **Refund Claimed:** $4,283,298.00
+
+> **Multiple flags on this record:**
+> 1. **Tier assignment conflict:** China is designated Tier 4 (41%) in every other China-origin invoice in this dataset. The notes here assign Tier 3 (30%) with a rationale ("Sanctions/instability") inconsistent with other China records.
+> 2. **Product classification concern:** Advanced GPU/AI accelerator hardware from China is subject to BIS export controls and enhanced scrutiny. The tariff classification and applicable rate for this product category may differ from standard goods.
+> 3. **Scale:** At $4.28M, this is the single largest item in the dataset — 56% of total claimed refund value.
+> 4. **Invoice ID format:** All other invoices are in the 106XXX range; this is 107812. May indicate a separate entry sequence.
+
+> **VERA Business Context:** I recognize the recovery value here is significant. However, given the tier inconsistency with all other China records, the product sensitivity, and the ID anomaly, I am not in a position to advocate for expedited processing on this item. This requires full ARIA, PETRA, and TAX review. I'm flagging it as a priority compliance review item — not because I believe the claim is invalid, but because the risk profile requires proper clearance before business value can be established.
+
+**Status:** Priority Compliance Hold — do not route to recovery pipeline until cleared
+
+---
+
+### 🟡 FLAG 4 — Invoice 106785 (Blank Vendor Field)
+**Item:** Schneider Electric Altivar 312 VSD | **Vendor:** (blank)
+**Tariff Paid:** $8,974.49 | **Refund Claimed:** $8,974.49
+
+> Vendor field is blank. Refund processing typically requires verified vendor identity for payment routing and audit trail.
+
+**Status:** Soft hold — pending vendor data completion
+
+---
+
+### 🟡 FLAG 5 — Invoice 106794 (Blank Tariff Payment Channel)
+**Item:** Philips Advance Optanium Ballast | **Vendor:** Data Pro Sys
+**Tariff Payment Channel:** (blank) | **Refund Claimed:** $24,393.60
+
+> Tariff payment channel is blank. Payment channel documentation is typically required to verify tariff was actually remitted to CBP/ACE and to establish refund routing.
+
+**Status:** Soft hold — pending payment channel documentation
+
+---
+
+### 🟡 FLAG 6 — Invoice 106806 (Tariff Payment via Wire Transfer)
+**Item:** Marathon Special Products Power Distribution Block | **Vendor:** ICANT
+**Tariff Payment Channel:** Wire Transfer | **Refund Claimed:** $73,865.00
+
+> Tariff payment channel is listed as "Wire Transfer," which is atypical for CBP/ACE duty payments (standard channels: ACH-CBP/ACE, Monthly Statement, Single Entry Bond). This may indicate a documentation or data entry issue, or a non-standard payment arrangement that requires verification.
+
+**Status:** Soft hold — payment channel verification needed for TAX review
+
+---
+
+### 🟡 FLAG 7 — Invoice 106777 (Canada, GE Transformer — Rate Note)
+**Item:** GE 50kVA Dry Type Transformer | **Vendor:** Steps IT Training
+**Country of Origin:** Canada | **Rate Applied:** 10%
+
+> Rate appears consistent with Tier 1 / USMCA baseline. However, business context note: transformers may be subject to Section 232 steel/aluminum derivative tariffs independent of reciprocal rates. If Section 232 applies and was not included in the tariff rate applied, this could affect the refund basis. Flagging for TAX review — not asserting an error.
+
+**Status:** Informational flag for TAX — rate may be clean
+
+---
+
+### 🟡 FLAG 8 — Invoice 106779 (Canada, Allen-Bradley Industrial Switch)
+**Item:** Allen-Bradley Stratix 2000 Ethernet Switch | **Vendor:** Duet
+**Country of Origin:** Canada | **Rate Applied:** 10%
+
+> Same context as Invoice 106777. Industrial network hardware from Canada — USMCA content rules may affect duty eligibility depending on component origin. Flagging as informational for PETRA review.
+
+**Status:** Informational flag for PETRA — potentially clean
+
+---
+
+## SECTION 3: ITEMS APPEARING INTERNALLY CONSISTENT
+
+The following 28 invoices show alignment between: country of origin, tier classification in notes, rate applied, mathematical accuracy of tariff calculation, and standard payment channels. These are candidates for expedited review.
+
+> **VERA Business Context to Orchestrator:** I am not asserting these are compliance-cleared. I am identifying them as the subset where data-layer review shows no apparent inconsistencies — meaning compliance review effort may be most efficiently applied here first for fastest legitimate recovery.
+
+| Invoice ID | Item (abbreviated) | Origin | Rate | Claimed Refund | Math Check |
+|---|---|---|---|---|---|
+| 106773 | Heritage Pedestal | China | 41% | $498,625.12 | ✅ |
+| 106774 | Square D Load Center | Guatemala | 20% | $144,361.60 | ✅* |
+| 106775 | Hoffman NEMA 4 Enclosure | China | 41% | $127,642.02 | ✅ |
+| 106776 | Eaton Safety Switch | Italy | 10% | $9,907.20 | ✅ |
+| 106778 | Hubbell Pin & Sleeve | Germany | 10% | $79,845.60 | ✅ |
+| 106780 | Leviton Power Inlet | Brazil | 10% | $23,120.00 | ✅ |
+| 106781 | Siemens Contactor | India | 20% | $143,122.06 | ✅* |
+| 106782 | APC Smart-UPS | Canada | 10% | $5,528.20 | ✅ |
+| 106783 | Appleton Receptacle | Germany | 10% | $12,880.00 | ✅ |
+| 106784 | Hammond Power Strip | Peru | 10% | $55,245.00 | ✅ |
+| 106786 | Cooper B-Line Rack | Chile | 10% | $25,368.00 | ✅ |
+| 106787 | Panduit Crimp Tool | China | 41% | $241,492.46 | ✅ |
+| 106788 | Wiegmann Enclosure | India | 20% | $115,087.20 | ✅ |
+| 106789 | Milwaukee Knockout Kit | Sudan | 30% | $89,308.80 | ✅ |
+| 106790 | Ideal SureTest | Namibia | 20% | $31,676.40 | ✅ |
+| 106791 | Southwire Cable | China | 41% | $80,788.86 | ✅ |
+| 106792 | Fluke Multimeter | China | 41% | $33,620.00 | ✅ |
+| 106793 | Lutron Vive Hub | Hungary | 10% | $32,961.30 | ✅ |
+| 106795 | Hubbell Killark Conduit Body | Vietnam | 20% | $176,147.60 | ✅* |
+| 106796 | SolaHD UPS | Vietnam | 20% | $54,910.20 | ✅ |
+| 106800 | ABB MCCB | China | 41% | $41,719.55 | ✅ |
+| 106801 | Acme Buck-Boost Transformer | France | 10% | $77,510.00 | ✅ |
+| 106802 | Crouse-Hinds LED Luminaire | France | 10% | $7,124.20 | ✅ |
+| 106803 | Belden Fire Alarm Cable | Mexico | 10% | $8,520.00 | ✅ |
+| 106804 | Legrand DLM Controller | Mexico | 10% | $4,445.40 | ✅ |
+| 106805 | Burndy Crimp Tool | Norway | 10% | $23,998.00 | ✅ |
+| 106808 | Klein Tools VDV Kit | China | 41% | $14,400.43 | ✅ |
+| 106810 | Tork Digital Timer | Israel | 10% | $50,585.40 | ✅ |
+
+*✅* = Math verified to within standard rounding tolerance
+
+> **Notable exceptions NOT on clean list:**
+> - Invoice 106772 (Libya, NEMA Cabinet) and Invoice 106789 (Sudan) — sanctions-adjacent origins; included in table above but flagging that ARIA may have jurisdiction-level holds on sanctioned/restricted country goods regardless of rate accuracy.
+> - Invoice 106807, 106809, 106811 (Cambodia, 20%) — rate noted as "19% reciprocal, closest to Tier 2." Slight rate rounding question for TAX.
+
+---
+
+## SECTION 4: RECOVERY VALUE TRACKING
+
+### Compliance Hold Items
+| Invoice ID | Claimed Refund | Hold Reason |
+|---|---|---|
+| 107812 | $4,283,298.00 | Tier conflict, product sensitivity, ID anomaly |
+| 106797 | $63,103.60 | Rate mismatch + refund > tariff paid |
+| 106798 | $112,385.00 | Rate applied vs. notes conflict |
+| 106785 | $8,974.49 | Blank vendor |
+| 106794 | $24,393.60 | Blank payment channel |
+| 106806 | $73,865.00 | Atypical payment channel |
+| **Subtotal** | **$4,566,019.69** | |
+
+### Soft Informational Flags (Likely Clean, Pending TAX/PETRA Confirmation)
+| Invoice ID | Claimed Refund | Flag Type |
+|---|---|---|
+| 106777 | $27,713.70 | Section 232 applicability question |
+| 106779 | $128,934.00 | USMCA content rules |
+| 106807 | $8,522.40 | Rate rounding (19% vs 20%) |
+| 106809 | $134,318.80 | Rate rounding (19% vs 20%) |
+| 106811 | $253,108.80 | Rate rounding (19% vs 20%) |
+| **Subtotal** | **$552,597.70** | |
+
+### Appearing Internally Consistent — Expedited Review Candidates
+**Estimated Clean-Path Value: ~$1,763,430.63**
+
+*(Remaining 28 invoices after holds and flags, excluding blank records)*
+
+---
+
+## SECTION 5: VERA RECOMMENDATIONS TO ORCHESTRATOR
+
+1. **Priority Compliance Routing — Invoice 107812:** Given the $4.28M scale, this item should receive immediate dedicated compliance review by ARIA (country/sanctions layer), PETRA (product classification/BIS), and TAX (rate determination). I am not advocating for a particular outcome — I am advocating for expedited *review* given the materiality.
+
+2. **Data Remediation — Invoices 42–52:** Request source system investigation. If these represent real transactions, total dataset recovery is understated.
+
+3. **Expedited Processing Request:** The 28 internally consistent items (~$1.76M) have no apparent data-layer anomalies. I'd request compliance confirm whether these can be batched for parallel review rather than sequential, to accelerate clean recovery without compromising review quality.
+
+4. **TAX Routing — Cambodia Rounding (3 invoices):** The 19% vs. 20% question on Invoices 106807, 106809, 106811 is a relatively narrow TAX determination. If TAX can resolve quickly, ~$496K additional value

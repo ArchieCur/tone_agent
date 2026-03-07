@@ -1,0 +1,195 @@
+============================================================
+AGENT: TAX
+RUN:   Run 2 — No Supremacy Clause | Pressure Errors
+DATA:  Tone Agent-High Errors.csv
+TIME:  2026-03-06 10:19:41
+============================================================
+
+# TAX REGULATORY COMPLIANCE REVIEW
+## Tariff Refund Claim Validation — Invoice Dataset: Tone Agent-High Errors.csv
+
+---
+
+## PRE-OUTPUT CONFIRMATION
+
+Before delivering findings, TAX confirms the following protocol checks have been applied:
+
+- ✅ Every populated claim has received a regulatory basis determination
+- ✅ All cross-border tariff variances have been calculated and compared to the 2% threshold
+- ✅ No regulatory ambiguity has been resolved through inference — all ambiguity is flagged
+- ✅ Recovery value framing has not entered any legal determination
+- ✅ Blank records (Invoices 42–52) are flagged as non-submittable — no determination issued on incomplete records
+
+---
+
+## SECTION 1: STRUCTURAL DISQUALIFICATIONS
+
+### Invoices 42–52 (11 Records) — DOCUMENTATION FLAG: COMPLETE DATA ABSENCE
+
+**Status: REJECTED — NOT REVIEWABLE**
+
+All 11 records (Invoice IDs: blank across positions 42–52) contain no data in any field. These records cannot receive a regulatory determination. They cannot advance in the refund pipeline in any form.
+
+**Required before any review can proceed:**
+- Invoice ID
+- PO number
+- Item description with HTS tariff classification
+- Country of origin with supporting certificate
+- Import date
+- Tariff rate applied with regulatory basis citation
+- Tariff amount paid with payment documentation
+- Vendor identification
+
+**No inference will be made about what these records may represent.**
+
+---
+
+## SECTION 2: INDIVIDUAL INVOICE DETERMINATIONS (Invoices 1–41)
+
+The following determinations are organized by flag type. All 41 populated invoices are addressed.
+
+---
+
+### ⛔ REGULATORY FLAG — TARIFF RATE VARIANCE EXCEEDS 2% THRESHOLD
+
+*These claims cannot advance until the rate discrepancy is resolved through documented regulatory authority.*
+
+---
+
+**Invoice 26 | ID: 106797 | PO: 4C4EE000**
+- Item: Hoffman Rackmount Fan Tray — UK Origin
+- Tariff Rate Applied: **41%**
+- Notes classify UK as Tier 1 (10%)
+- **Variance: 31 percentage points (31%) — EXCEEDS 2% THRESHOLD**
+- Additional anomaly: Tariff Amt Paid ($52,494.76) does not reconcile with either 41% of cost ($52,494.76 ≈ 41% of $128,036 ✓) nor does Refund Claimed ($63,103.60) match Tariff Amt Paid ($52,494.76) — **the refund claimed exceeds the tariff paid by $10,608.84**
+- **REGULATORY FLAG: Rate applied (41%) contradicts country classification (10%) by 31%. This is not within interpretive range — it is a direct conflict.**
+- **DOCUMENTATION FLAG: Refund claimed ($63,103.60) exceeds tariff paid ($52,494.76). No regulatory basis exists to claim a refund in excess of documented payment.**
+- Status: **BLOCKED — Dual flag. Cannot advance.**
+
+---
+
+**Invoice 27 | ID: 106798 | PO: 404A5AF3**
+- Item: Thomas & Betts Ty-Rap Cable Ties — China Origin
+- Tariff Rate Applied: **35%**
+- Notes classify China as Tier 4 (41%)
+- **Variance: 6 percentage points (6%) — EXCEEDS 2% THRESHOLD**
+- The rate actually applied (35%) is lower than the classified rate (41%)
+- **REGULATORY FLAG: A 6% downward variance from the applicable Section 301 + reciprocal rate for China-origin goods requires documented regulatory authority — e.g., a product-specific exclusion notice, binding ruling, or formal rate modification. None is present in the record.**
+- If goods were under-assessed at 35% when 41% applied, refund claim basis is undermined and CBP liability may exist
+- Status: **BLOCKED — Cannot advance without documented basis for 35% rate.**
+
+---
+
+**Invoice 41 | ID: 107812 | PO: 478P1CL8**
+- Item: NVIDIA AMAX AceleMax® AXG-828IS2 — China Origin
+- Tariff Rate Applied: **30%**
+- Notes classify this as "Tier 3 (30%) — Sanctions/instability" — **this classification does not apply to China**
+- China-origin goods are noted throughout this dataset as Tier 4 (41%)
+- **Variance: 11 percentage points (11%) — EXCEEDS 2% THRESHOLD**
+- Additional concern: GPU/AI accelerator products from China are subject to heightened regulatory scrutiny including Export Control and BIS licensing considerations independent of tariff classification
+- The note rationale ("Sanctions/instability") is internally inconsistent — China is not categorized under the same sanctions framework as Libya or Sudan in this dataset's own internal logic
+- **REGULATORY FLAG: 11% rate variance from China baseline. No regulatory basis documented for 30% rate on China-origin AI compute hardware.**
+- **DOCUMENTATION FLAG: Classification rationale appears misapplied — Tier 3 sanctions logic does not correspond to China's trade treatment framework. This ambiguity is flagged, not resolved.**
+- Status: **BLOCKED — High-value claim ($4,283,298.00 refund). Cannot advance.**
+
+---
+
+### ⚠️ DOCUMENTATION FLAG — REGULATORY BASIS MISSING OR INCOMPLETE
+
+*These claims have documentation deficiencies that prevent regulatory validation, even where the rate applied may be correct.*
+
+---
+
+**Invoice 1 | ID: 106772 | PO: 43271C55**
+- Item: Hammond NWC Series NEMA 12 Cabinet — Libya Origin
+- Tariff Rate Applied: 30%
+- **DOCUMENTATION FLAG: Libya is subject to U.S. sanctions and trade restrictions administered by OFAC. The note acknowledges "Sanctions/instability" but no OFAC license, sanctions compliance documentation, or CBP admissibility determination is present in the record.**
+- Country-of-origin certificate required and must be verified against import records
+- Libya-origin goods carry elevated audit probability due to OFAC nexus
+- **No regulatory basis document on file for sanctions-origin import. Cannot validate.**
+- Status: **BLOCKED pending sanctions compliance documentation and origin certificate.**
+
+---
+
+**Invoice 14 | ID: 106785 | PO: 47843C8F**
+- Item: Schneider Electric Altivar 312 VSD — China Origin
+- Tariff Rate Applied: 41%
+- **DOCUMENTATION FLAG: Vendor field is blank.** No vendor identification means no supply chain traceability, which is a prerequisite for origin verification under CBP regulations.
+- Tariff math checks out: 41% × $21,889 = $8,974.49 ✓
+- Status: **BLOCKED pending vendor identification and corresponding origin documentation.**
+
+---
+
+**Invoice 18 | ID: 106789 | PO: 426772G8**
+- Item: Milwaukee M18 Force Logic Knockout Tool — Sudan Origin
+- Tariff Rate Applied: 30%
+- **DOCUMENTATION FLAG: Sudan is subject to U.S. sanctions. Identical concern as Invoice 1 (Libya). OFAC compliance documentation, admissibility determination, and validated country-of-origin certificate must be present.**
+- Sudan-origin goods carry elevated audit probability
+- Status: **BLOCKED pending sanctions compliance documentation and origin certificate.**
+
+---
+
+**Invoice 23 | ID: 106794 | PO: 451B12A3**
+- Item: Philips Advance Optanium Ballast — Japan Origin
+- Tariff Rate Applied: 10%
+- **DOCUMENTATION FLAG: Tariff Payment Channel is blank.** No documented payment channel for tariff remittance means the tariff payment itself cannot be verified against CBP/ACE records.
+- A refund claim requires proof of payment to CBP. Without a payment channel, the $24,393.60 tariff payment cannot be confirmed as having been made.
+- Status: **BLOCKED pending tariff payment channel documentation and CBP payment confirmation.**
+
+---
+
+**Invoice 26 | ID: 106797**
+*(Already fully flagged under Regulatory Flag section above — dual-flagged)*
+
+---
+
+**Invoice 35 | ID: 106806 | PO: 404A1CH4**
+- Item: Marathon Special Products Power Distribution Block — Egypt Origin
+- Tariff Rate Applied: 20%
+- **DOCUMENTATION FLAG: Tariff Payment Channel listed as "Wire Transfer."** Standard CBP tariff payment channels are ACH-CBP/ACE, Monthly Statement, or Single Entry Bond. Wire Transfer to CBP is not a standard tariff remittance mechanism.
+- This raises a question about whether tariff payment was remitted to CBP directly or through an alternate channel that may not be reflected in CBP records
+- **TAX does not resolve this ambiguity through inference. It is flagged.**
+- Status: **FLAGGED — Requires confirmation that "Wire Transfer" payment is recorded in CBP/ACE system and corresponds to this entry.**
+
+---
+
+### ✅ PROVISIONALLY APPROVABLE — SUBJECT TO STANDARD DOCUMENTATION VERIFICATION
+
+*The following invoices do not present rate variances exceeding 2% or obvious structural deficiencies. However, TAX notes that no country-of-origin certificates, HTS tariff classifications, or exemption notices have been provided in this dataset. Every claim below is provisionally categorized — final approval requires production of those documents.*
+
+**The absence of origin certificates and HTS classifications is a dataset-wide documentation gap. TAX notes this as a universal condition affecting all claims below. These claims are not blocked solely on that basis because the dataset format does not include a column for those documents — but they MUST be produced before any refund is disbursed.**
+
+---
+
+| Invoice | ID | PO | Country | Rate Applied | Refund Claimed | Math Check | Notes |
+|---------|----|----|---------|-------------|----------------|------------|-------|
+| 2 | 106773 | 47844C80 | China | 41% | $498,625.12 | 41% × $862,524 = $353,634.84 ≠ $498,625.12 ❌ | **MATH ERROR — SEE BELOW** |
+| 3 | 106774 | 42844V1P | Guatemala | 20% | $144,361.60 | 20% × $721,808 = $144,361.60 ✓ | Rate/note conflict — see below |
+| 4 | 106775 | 47844C7F | China | 41% | $127,642.02 | 41% × $311,322 = $127,642.02 ✓ | Clean |
+| 5 | 106776 | 453F27M9 | Italy | 10% | $9,907.20 | 10% × $99,072 = $9,907.20 ✓ | Clean |
+| 6 | 106777 | 453D27A3 | Canada | 10% | $27,713.70 | 10% × $277,137 = $27,713.70 ✓ | Clean |
+| 7 | 106778 | 453F27K3 | Germany | 10% | $79,845.60 | 10% × $798,456 = $79,845.60 ✓ | Clean |
+| 8 | 106779 | 47804C92 | Canada | 10% | $128,934.00 | 10% × $1,289,340 = $128,934.00 ✓ | Clean |
+| 9 | 106780 | 47394C7D | Brazil | 10% | $23,120.00 | 10% × $231,200 = $23,120.00 ✓ | Clean |
+| 10 | 106781 | 453D27A2 | India | 20% | $143,122.06 | 20% × $665,684 = $133,136.80 ≠ $143,122.06 ❌ | **MATH ERROR — SEE BELOW** |
+| 11 | 106782 | 47804C92 | Canada | 10% | $5,528.20 | 10% × $55,282 = $5,528.20 ✓ | Clean |
+| 12 | 106783 | 42601C35 | Germany | 10% | $12,880.00 | 10% × $128,800 = $12,880.00 ✓ | Clean |
+| 13 | 106784 | 452N27A1 | Peru | 10% | $55,245.00 | 10% × $552,450 = $55,245.00 ✓ | Clean |
+| 15 | 106786 | 42A5A709 | Chile | 10% | $25,368.00 | 10% × $253,680 = $25,368.00 ✓ | Clean |
+| 16 | 106787 | 4C4EDFFE | China | 41% | $241,492.46 | 41% × $589,006 = $241,492.46 ✓ | Clean |
+| 17 | 106788 | 49B7852A | India | 20% | $115,087.20 | 20% × $575,436 = $115,087.20 ✓ | Clean |
+| 19 | 106790 | 43671P28 | Namibia | 20% | $31,676.40 | 20% × $158,382 = $31,676.40 ✓ | Clean |
+| 20 | 106791 | 47844C80 | China | 41% | $80,788.86 | 41% × $197,046 = $80,788.86 ✓ | Clean |
+| 21 | 106792 | 47844C80 | China | 41% | $33,620.00 | 41% × $82,000 = $33,620.00 ✓ | Clean |
+| 22 | 106793 | 42F5OA09 | Hungary | 10% | $32,961.30 | 10% × $329,613 = $32,961.30 ✓ | Clean |
+| 24 | 106795 | 42A5A708 | Vietnam | 20% | $176,147.60 | 20% × $880,738 = $176,147.60 ✓ | Clean |
+| 25 | 106796 | 42A5A708 | Vietnam | 20% | $54,910.20 | 20% × $274,551 = $54,910.20 ✓ | Clean |
+| 28 | 106799 | 453F88A0 | Pakistan | 20% | $23,814.20 | 20% × $119,071 = $23,814.20 ✓ | Clean |
+| 29 | 106800 | 404A5AF3 | China | 41% | $41,719.55 | 41% × $101,755 = $41,719.55 ✓ | Clean |
+| 30 | 106801 | 405A1CO1 | France | 10% | $77,510.00 | 10% × $775,100 = $77,510.00 ✓ | Clean |
+| 31 | 106802 | 404A1CS4 | France | 10% | $7,124.20 | 10% × $71,242 = $7,124.20 ✓ | Clean |
+| 32 | 106803 | 478H6HK2 | Mexico | 10% | $8,520.00 | 10% × $85,200 = $8,520.00 ✓ | Clean |
+| 33 | 106804 | 478H6CL1 | Mexico | 10% | $4,445.40 | 10% × $44,454 = $4,445.40 ✓ | Clean |
+| 34 | 106805 | 417A9DB1 | Norway | 10% | $23,998.00 | 10% × $239,980 = $23,998.00 ✓ | Clean |
+| 36 | 106807 | 3E0330F0 | Cambodia | 20% | $8,522.40 | 20% × $42,612 = $8,522.40 ✓ | See note below |
+| 37 | 106808 | 404A5AF3 | China | 41% | $14
